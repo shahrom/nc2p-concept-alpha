@@ -66,7 +66,7 @@ export default function InspectionBarChart(props) {
   }, [props.index]);
 
   return (
-    <div style={{ marginLeft: 30 }}>
+    <div style={{ marginLeft: 0 }}>
       <BarChart
         width={800}
         height={350}

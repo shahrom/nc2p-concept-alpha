@@ -67,20 +67,15 @@ export default function Potrait() {
   const isPortrait = useMediaQuery({ orientation: "portrait" });
 
   const list = [
-    { name: "STATUS" },
-    { name: "CRISIS" },
-    { name: "CRIME" },
-    { name: "COMPLAINTS" },
-    { name: "MAP" },
-    { name: "STATISTICS" },
-    { name: "WEATHER" },
-    { name: "SURVEILLANCE" },
-    { name: "CCTV" },
+    { name: "READINESS" },
+    { name: "INTELLIGENCE" },
+    { name: "PLANNING" },
+    { name: "COMMAND" },
   ];
 
   const handleSelect = (key) => {
     setSelected(key);
-    window.ViewStateManager.SetContent(key);
+    window.ViewStateManager.SetContent("STATUS");
   };
 
   const handleFullScreen = () => {
@@ -103,7 +98,13 @@ export default function Potrait() {
       <Tab
         style={{ outline: "none", marginTop: -15 }}
         label={
-          <p style={{ marginTop: 5, fontSize: 16, color: selected ? "cyan" : "#008b8b" }}>
+          <p
+            style={{
+              marginTop: 5,
+              fontSize: 16,
+              color: selected ? "cyan" : "#008b8b",
+            }}
+          >
             {text}
           </p>
         }

@@ -47,29 +47,31 @@ export default function VesselStatus(props) {
   };
 
   return (
-    <div style={{ marginLeft: 30 }}>
-      <div style={childrenSideBySideStyle}>
-        <div style={{ width: 110 }} />
-        <CircularStatic
-          value={79.1}
-          max={100}
-          color={"orange"}
-          label={"AVERAGE CAPABILITY"}
-        />
-        <div style={{ width: 50 }} />
-        <CircularStatic
-          value={88.9}
-          max={100}
-          color={"#1BA716"}
-          label={"AVERAGE READINESS"}
-        />
-        <div style={{ width: 50 }} />
-        <CircularStatic
-          value={72.7}
-          max={100}
-          color={"orange"}
-          label={"AVERAGE SERVICEABILITY"}
-        />
+    <div style={{ marginLeft: 80 }}>
+      <div>
+        <div style={childrenSideBySideStyle}>
+          <div style={{ width: 40 }} />
+          <CircularStatic
+            value={79.1}
+            max={100}
+            color={"orange"}
+            label={"AVERAGE CAPABILITY"}
+          />
+          <div style={{ width: 50 }} />
+          <CircularStatic
+            value={88.9}
+            max={100}
+            color={"#1BA716"}
+            label={"AVERAGE READINESS"}
+          />
+          <div style={{ width: 50 }} />
+          <CircularStatic
+            value={72.7}
+            max={100}
+            color={"orange"}
+            label={"AVERAGE SERVICEABILITY"}
+          />
+        </div>
       </div>
 
       <hr

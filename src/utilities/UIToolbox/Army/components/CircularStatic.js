@@ -10,7 +10,7 @@ function CircularProgressWithLabel(props) {
         <CircularProgress
           variant="determinate"
           value={100}
-          size={120}
+          size={"5em"}
           style={{ color: "rgba(255,255,255,0.2)" }}
         />
       </Box>
@@ -18,15 +18,15 @@ function CircularProgressWithLabel(props) {
         <CircularProgress
           variant="determinate"
           value={(props.value / props.max) * 100}
-          size={120}
-          style={{ color: props.color, marginLeft: -120 }}
+          size={"5em"}
+          style={{ color: props.color, marginLeft: -80 }}
         />
         <p
           style={{
             color: props.color,
-            fontSize: 40,
-            marginLeft: -100,
-            marginTop: 38,
+            fontSize: 30,
+            marginLeft: -80,
+            marginTop: 25,
             width: 80,
           }}
         >
