@@ -36,23 +36,23 @@ export default function Crisis() {
   };
 
   return (
-    // <Container maxWidth="xl" style={{ marginTop: 100 }}>
     <div style={{ overflowY: "auto", height: window.innerHeight - 90 }}>
-      <Grid container justify="center" spacing={5}>
-        <Grid item md={3} xs={12}>
-          <Menu1 handleMoreInfo={handleMoreInfo} />
+      <Container maxWidth="xl" style={{ marginTop: 100 }}>
+        <Grid container justify="center" spacing={5}>
+          <Grid item md={3} xs={12}>
+            <Menu1 handleMoreInfo={handleMoreInfo} />
+          </Grid>
+          <Grid item md={3} xs={12}>
+            <Menu2 handleMoreInfo={handleMoreInfo} />
+          </Grid>
+          <Grid item md={3} xs={12}>
+            <Menu3 handleMoreInfo={handleMoreInfo} />
+          </Grid>
+          <Grid item md={3} xs={12}>
+            <Menu4 handleMoreInfo={handleMoreInfo} />
+          </Grid>
         </Grid>
-        <Grid item md={3} xs={12}>
-          <Menu2 handleMoreInfo={handleMoreInfo} />
-        </Grid>
-        <Grid item md={3} xs={12}>
-          <Menu3 handleMoreInfo={handleMoreInfo} />
-        </Grid>
-        <Grid item md={3} xs={12}>
-          <Menu4 handleMoreInfo={handleMoreInfo} />
-        </Grid>
-      </Grid>
+      </Container>
     </div>
-    // </Container>
   );
 }
