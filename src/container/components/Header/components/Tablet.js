@@ -75,13 +75,13 @@ export default function Landscape() {
           }}
         >
           <span style={{ display: isDesktopOrLaptop ? "block" : "none" }}>
-            <span style={{ color: "white" }}>NC2+</span> DESKTOP
+            <span style={{ color: "white" }}>NC2+</span> MOBILE
           </span>
           <span style={{ display: isBigScreen ? "block" : "none" }}>
-            <span style={{ color: "white" }}>NC2+</span> DISPLAY WALL
+            <span style={{ color: "white" }}>NC2+</span> MOBILE
           </span>
           <span style={{ display: isTablet ? "block" : "none" }}>
-            <span style={{ color: "white" }}>NC2+</span> TABLET
+            <span style={{ color: "white" }}>NC2+</span> MOBILE
           </span>
           <span style={{ display: isMobile ? "block" : "none" }}>
             <span style={{ color: "white" }}>NC2+</span> MOBILE
@@ -137,7 +137,7 @@ export default function Landscape() {
             }}
             TabIndicatorProps={{
               style: {
-                background: "#2396C8",
+                background: "rgba(255,255,255,0.2)",
                 borderRadius: 5,
                 height: 2,
                 top: 38,
@@ -147,8 +147,8 @@ export default function Landscape() {
             <Tab
               style={{ minWidth: 150, outline: "none" }}
               label={
-                <p style={{ marginTop: 5, fontSize: 16, color: "CYAN" }}>
-                  DAILY STATUS
+                <p style={{ marginTop: 5, fontSize: 16, color: "cyan" }}>
+                  READINESS
                 </p>
               }
               value={"STATUS"}
@@ -156,38 +156,29 @@ export default function Landscape() {
             <Tab
               style={{ minWidth: 150, outline: "none" }}
               label={
-                <p style={{ marginTop: 5, fontSize: 16, color: "ORANGE" }}>
-                  CRISIS MANAGEMENT
+                <p style={{ marginTop: 5, fontSize: 16, color: "orange" }}>
+                  INTELLIGENCE
                 </p>
               }
-              value={"CRISIS"}
+              value={"STATUS"}
             />
             <Tab
               style={{ minWidth: 150, outline: "none" }}
               label={
-                <p style={{ marginTop: 5, fontSize: 16, color: "ORANGE" }}>
-                  CRIME PREVENTION
+                <p style={{ marginTop: 5, fontSize: 16, color: "lime" }}>
+                  PLANNING
                 </p>
               }
-              value={"CRIME"}
+              value={"STATUS"}
             />
             <Tab
               style={{ minWidth: 150, outline: "none" }}
               label={
-                <p style={{ marginTop: 5, fontSize: 16, color: "ORANGE" }}>
-                  PUBLIC COMPLAINTS
+                <p style={{ marginTop: 5, fontSize: 16, color: "yellow" }}>
+                  COMMAND
                 </p>
               }
-              value={"COMPLAINTS"}
-            />
-            <Tab
-              style={{ minWidth: 150, outline: "none" }}
-              label={
-                <p style={{ marginTop: 5, fontSize: 16, color: "ORANGE" }}>
-                  OPERATION MAP
-                </p>
-              }
-              value={"OTHERS"}
+              value={"MONITORING"}
             />
           </Tabs>
         </div>

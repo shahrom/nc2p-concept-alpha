@@ -15,10 +15,10 @@
 import ContentState from "container/components/Content/ViewState";
 import StatusState from "container/components/Content/components/Status/ViewState";
 import CrimeState from "container/components/Content/components/Crime/ViewState";
-import CrisisState from "container/components/Content/components/Crisis/ViewState";
+import ArmyState from "container/components/Content/components/Army/ViewState";
 import FooterState from "container/components/Footer/ViewState";
 
-import CrisisDetail from "container/components/Content/components/CrisisDetail/ViewState";
+// import ArmyDetail from "container/components/Content/components/ArmyDetail/ViewState";
 import CrimeDetail from "container/components/Content/components/CrimeDetail/ViewState";
 
 import IVSSDetail from "container/components/Content/components/IVSSDetail/ViewState";
@@ -36,9 +36,9 @@ export default class ViewStateManager {
       this.contentState = new ContentState();
       this.dashboardState = new StatusState();
       this.crimeState = new CrimeState();
-      this.crisisState = new CrisisState();
+      this.crisisState = new ArmyState();
       this.footerState = new FooterState();
-      this.crisisDetail = new CrisisDetail();
+      // this.crisisDetail = new ArmyDetail();
       this.crimeDetail = new CrimeDetail();
 
       this.ivssDetail = new IVSSDetail();
@@ -67,15 +67,15 @@ export default class ViewStateManager {
 
   SetContent(type) {
     this.contentState.SetContent(type);
-    // this.footerState.Display(true);
-    // if (type === "STATUS-INFO") this.footerState.Display(false);
-    // if (type === "CRISIS-INFO") this.footerState.Display(false);
-    // if (type === "CRIME-INFO") this.footerState.Display(false);
-    // if (type === "COMPLAINTS-INFO") this.footerState.Display(false);
-    // if (type === "MONITORING") this.footerState.Display(false);
+    this.footerState.Display(true);
+    if (type === "STATUS-INFO") this.footerState.Display(false);
+    if (type === "CRISIS-INFO") this.footerState.Display(false);
+    if (type === "CRIME-INFO") this.footerState.Display(false);
+    if (type === "COMPLAINTS-INFO") this.footerState.Display(false);
+    if (type === "MONITORING") this.footerState.Display(false);
   }
 
-  DisplayCrisisDetail(id) {
+  DisplayArmyDetail(id) {
     this.crisisDetail.SetOpen(id);
   }
 

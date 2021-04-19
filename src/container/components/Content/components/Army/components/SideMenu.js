@@ -12,14 +12,15 @@
  */
 
 import React from "react";
+import Container from "@material-ui/core/Container";
 
 // components
-import Menu1 from "utilities/UIToolbox/Status/Menu1";
+import Menu from "utilities/UIToolbox/Army/Menu";
 
-export default function Menu(props) {
+export default function SideMenu(props) {
   return (
-    <div>
-      <Menu1 handleMoreInfo={props.handleMoreInfo} />
-    </div>
+    <Container maxWidth="md">
+      <Menu handleSlideIndex={props.handleSlideIndex} />
+    </Container>
   );
 }

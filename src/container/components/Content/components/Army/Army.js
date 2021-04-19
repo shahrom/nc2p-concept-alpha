@@ -19,7 +19,7 @@ import SideMenu from "./components/SideMenu";
 import Content from "./components/Content";
 import ViewState from "./ViewState";
 
-export default function Crisis() {
+export default function Army() {
   // 1. UseState
   const [display, setDisplay] = React.useState("block");
   const [sliderIndex, setSliderIndex] = React.useState(1);

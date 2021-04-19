@@ -12,13 +12,14 @@
  */
 
 import React from "react";
-import Content2 from "./components/Content2";
+import Radar from "./components/Radar";
 
 export default function Slide2(props) {
   return (
     <div
       style={{
         backgroundColor: "rgba(17,21,30,0.7)",
+        height: 700,
       }}
     >
       <div>
@@ -31,9 +32,9 @@ export default function Slide2(props) {
             backgroundColor: "#0B3B84",
           }}
         >
-          SLIDE 2
+          RADAR READINESS
         </p>
-        <Content2 />
+        <Radar />
       </div>
     </div>
   );

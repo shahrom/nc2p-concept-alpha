@@ -12,16 +12,30 @@
  */
 
 import React from "react";
+import Radar from "./components/Radar";
 
-export default function Content1(props) {
+export default function Slide2(props) {
   return (
-    <div>
-      <img
-        src={"img/content/status/slide.jpg"}
-        width="100%"
-        height="auto"
-        object-fit="contain"
-      />
+    <div
+      style={{
+        backgroundColor: "rgba(17,21,30,0.7)",
+        height: 700,
+      }}
+    >
+      <div>
+        <p
+          style={{
+            textAlign: "center",
+            padding: 10,
+            fontSize: 28,
+            color: "white",
+            backgroundColor: "#0B3B84",
+          }}
+        >
+          RADAR READINESS
+        </p>
+        <Radar />
+      </div>
     </div>
   );
 }

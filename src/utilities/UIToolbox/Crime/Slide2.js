@@ -12,7 +12,7 @@
  */
 
 import React from "react";
-import Content2 from "./components/Content2";
+import ACCBarChart from "./components/ACCBarChart";
 
 export default function Slide2(props) {
   return (
@@ -31,9 +31,9 @@ export default function Slide2(props) {
             backgroundColor: "#0B3B84",
           }}
         >
-          SLIDE 2
+          LIMITED OPERATIONAL AVAILABILITY (CAT 1,2 & 3)
         </p>
-        <Content2 />
+        <ACCBarChart />
       </div>
     </div>
   );

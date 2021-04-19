@@ -14,12 +14,12 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
 import Button from "@material-ui/core/Button";
-import Chip from "@material-ui/core/Chip";
 
 // icons
 import InfoIcon from "@material-ui/icons/Info";
 import EqualizerIcon from "@material-ui/icons/Equalizer";
 import AppsIcon from "@material-ui/icons/Apps";
+import SearchIcon from "@material-ui/icons/Search";
 
 export default function CrisisManagement(props) {
   // 1
@@ -40,46 +40,20 @@ export default function CrisisManagement(props) {
   return (
     <animated.div style={animLayout}>
       <div>
-        <p style={{ color: "white", fontSize: 14 }}>
-          <span style={{ color: "white", fontSize: 24 }}>02</span>/CRISIS
-          MANAGEMENT
+        <p style={{ color: "gray", fontSize: 14 }}>
+          <span style={{ color: "gray", fontSize: 14 }}>ARMY</span>/READINESS
         </p>
-
-        <div style={childrenSideBySideStyle}>
-          <Chip
-            style={{ color: "gray", borderColor: "gray" }}
-            label="FLOOD"
-            variant="outlined"
-            size="small"
-          />
-          <div style={{ width: 10 }} />
-          <Chip
-            style={{ color: "gray", borderColor: "gray" }}
-            label="FIRE"
-            variant="outlined"
-            size="small"
-          />
-          <div style={{ width: 10 }} />
-          <Chip
-            style={{ color: "gray", borderColor: "gray" }}
-            label="FALLING TREE"
-            variant="outlined"
-            size="small"
-          />
-        </div>
-        <br />
-        <br />
 
         {/* // Title */}
         <span
           style={{
             fontFamily: "Barlow",
-            color: "orange",
+            color: "lime",
             fontSize: 35,
             fontWeight: 500,
           }}
         >
-          CRISIS
+          ARMY
           <span
             style={{
               fontFamily: "Barlow",
@@ -88,17 +62,17 @@ export default function CrisisManagement(props) {
               fontWeight: 100,
             }}
           >
-            MANAGEMENT
+            READINESS
           </span>
         </span>
 
         <br />
 
-        <div>
+        <div style={{ marginLeft: 60, padding: 20 }}>
           <img
-            src={"img/content/crisis/main.jpg"}
-            width="100%"
-            height="auto"
+            src={"img/logo/td.png"}
+            width="100px"
+            height="100px"
             object-fit="contain"
           />
         </div>
@@ -107,29 +81,28 @@ export default function CrisisManagement(props) {
 
         <div style={childrenSideBySideStyle}>
           <Button
-            onClick={() => props.handleSlideIndex(1)}
             style={{
               outline: "none",
               color: "cyan",
               borderColor: "gray",
             }}
             variant="outlined"
-            startIcon={<AppsIcon />}
+            startIcon={<SearchIcon />}
           >
-            Slide 1
+            Search
           </Button>
-          <div style={{ width: 10 }} />
+          <div style={{ width: 5 }} />
           <Button
-            onClick={() => props.handleSlideIndex(2)}
             style={{
               outline: "none",
               color: "cyan",
               borderColor: "gray",
+              backgroundColor: "rgba(255,255,255,0.2)",
+              width: 150,
             }}
             variant="outlined"
-            startIcon={<EqualizerIcon />}
           >
-            Slide 2
+            19 RAMD
           </Button>
         </div>
 
@@ -138,11 +111,33 @@ export default function CrisisManagement(props) {
         <Button
           style={{ border: "none", outline: "none", color: "#0375ED" }}
           startIcon={<InfoIcon />}
-          onClick={() => {
-            window.ViewStateManager.SetContent("CRISIS-INFO");
-          }}
+          onClick={() => props.handleSlideIndex(1)}
         >
-          Detail Info
+          Summary
+        </Button>
+        <br />
+        <Button
+          style={{ border: "none", outline: "none", color: "gray" }}
+          startIcon={<InfoIcon />}
+          // onClick={() => props.handleSlideIndex(2)}
+        >
+          Unit Readiness
+        </Button>
+        <br />
+        <Button
+          style={{ border: "none", outline: "none", color: "gray" }}
+          startIcon={<InfoIcon />}
+          // onClick={() => props.handleSlideIndex(3)}
+        >
+          SFS
+        </Button>
+        <br />
+        <Button
+          style={{ border: "none", outline: "none", color: "gray" }}
+          startIcon={<InfoIcon />}
+          // onClick={() => props.handleSlideIndex(4)}
+        >
+          Reports
         </Button>
       </div>
     </animated.div>

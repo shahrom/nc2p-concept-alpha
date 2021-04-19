@@ -21,9 +21,9 @@ export default function RightPanel(props) {
     <div
       style={{
         position: "absolute",
-        width: 350,
+        width: 250,
         height: window.innerHeight,
-        marginLeft: window.innerWidth - 350,
+        marginLeft: window.innerWidth - 250,
         backdropFilter: "blur(5px)",
         backgroundColor: "rgba(0, 0, 0, 0.6)",
       }}

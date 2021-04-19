@@ -12,16 +12,30 @@
  */
 
 import React from "react";
+import Boat from "./components/Boat";
 
-export default function Content2(props) {
+export default function Slide1(props) {
   return (
-    <div>
-      <img
-        src={"img/content/status/slide.jpg"}
-        width="100%"
-        height="auto"
-        object-fit="contain"
-      />
+    <div
+      style={{
+        backgroundColor: "rgba(17,21,30,0.7)",
+        height: 700,
+      }}
+    >
+      <div>
+        <p
+          style={{
+            textAlign: "center",
+            padding: 10,
+            fontSize: 28,
+            color: "white",
+            backgroundColor: "#0B3B84",
+          }}
+        >
+          BOAT READINESS
+        </p>
+        <Boat />
+      </div>
     </div>
   );
 }

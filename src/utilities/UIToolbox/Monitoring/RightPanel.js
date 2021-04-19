@@ -2,9 +2,9 @@
  * --------------------------------------------------------------------
  * Project:
  * Version: 0.1.1
- * File: Dashboard.js
- * Created: Saturday, 3rd October 2020 7:50:47 am
- * Modified: Sunday, 4th October 2020 2:33:35 pm
+ * File: LeftDrawer.js
+ * Created: Wednesday, 4th November 2020 2:08:25 pm
+ * Modified: Thursday, 5th November 2020 1:32:22 am
  * Author: Shahrom Azmi Nazeer (shahrom@scs.my)
  *
  * Copyright (C) 2020 - System Consultancy Services Sdn. Bhd.
@@ -13,23 +13,25 @@
 
 import React from "react";
 import List from "@material-ui/core/List";
-import ReactPlayer from "react-player";
+import ListItem from "@material-ui/core/ListItem";
+import { useSpring, animated } from "react-spring";
+import GifPlayer from "react-gif-player";
+import { Button } from "@material-ui/core";
 
-export default function RightPanel() {
+// component
+import { ChartPie1 } from "./components/ChartPie";
+import { BarChart1 } from "./components/BarChart";
+import { LineGauge } from "./components/LineGauge";
+import { CircularGauge } from "./components/CircularGauge";
+import { Sparkline } from "./components/Sparkline";
+
+export default function LeftPanel() {
   const [open, setOpen] = React.useState(true);
-
-  const handleOpenDetail = (id) => {
-    if (id === "IERS") window.ViewStateManager.DisplayIERSDetail();
-    if (id === "IVSS") window.ViewStateManager.DisplayIVSSDetail();
-    if (id === "ITMS") window.ViewStateManager.DisplayITMSDetail();
-    if (id === "IPDRS") window.ViewStateManager.DisplayIPDRSDetail();
-    if (id === "ICMS") window.ViewStateManager.DisplayICMSDetail();
-  };
 
   const MyListItem = (props) => (
     <div
       style={{
-        paddingLeft: 5,
+        padding: 10,
         textAlign: "center",
       }}
     >
@@ -42,11 +44,10 @@ export default function RightPanel() {
         }}
       >
         <p
-          onClick={() => handleOpenDetail(props.id)}
           style={{
             fontSize: "14px",
             color: "white",
-            padding: 10,
+            padding: 5,
           }}
         >
           {props.label}
@@ -55,6 +56,41 @@ export default function RightPanel() {
       <div>{props.content}</div>
     </div>
   );
+
+  const ZoomtoMap = (val) => {
+    var command;
+    switch (val) {
+      case 1:
+        command = "ZOOM_TO_ROBBERY";
+        break;
+      case 2:
+        command = "ZOOM_TO_FR";
+        break;
+      case 3:
+        command = "ZOOM_TO_FIRE";
+        break;
+      case 4:
+        command = "ZOOM_TO_COMMUNITY";
+        break;
+      case 5:
+        command = "ZOOM_TO_PANICBUTTON";
+        break;
+      case 6:
+        command = "ZOOM_TO_SENSORS";
+        break;
+    }
+    var param = {
+      Receiver: "MAPBOX",
+      Command: command,
+    };
+    window.MessageDispatcher.TriggerMessageDispatcher(param);
+
+    // var param = {
+    //   Receiver: "VIEW_STATE_MANAGER",
+    //   Command: "DISPLAY_INFO_SLIDER",
+    // };
+    // window.MessageDispatcher.TriggerMessageDispatcher(param);
+  };
 
   const Content = () => (
     <div>
@@ -68,7 +104,7 @@ export default function RightPanel() {
             fontWeight: 500,
           }}
         >
-          SUB
+          READINESS
           <span
             style={{
               fontFamily: "Barlow",
@@ -76,126 +112,59 @@ export default function RightPanel() {
               fontSize: 24,
               fontWeight: 100,
             }}
-          >
-            SYSTEMS
-          </span>
+          ></span>
         </span>
       </div>
-
       <List
         style={{
-          height: window.innerHeight - 90,
+          maxHeight: window.innerHeight - 160,
           overflow: "auto",
         }}
       >
-        <MyListItem
-          id={"IERS"}
-          label={"IERS - FLOOD"}
-          content={
-            <img
-              src={"img/content/crisis/content.gif"}
-              width="450px"
-              height="auto"
-              object-fit="contain"
-            />
-          }
-        />
-        <MyListItem
-          id={"IVSS"}
-          label={"IVSS - SURVEILLANCE"}
-          content={
-            <div>
-              <ReactPlayer
-                style={{ padding: 0 }}
-                width={372}
-                height={"auto"}
-                url={"http://115.133.238.21:98/uploaded/video/Kuching/K2.mp4"}
-                playing={true}
-                loop={true}
-                muted={true}
-                autoPlay={true}
-                controls={false}
-              />
-            </div>
-          }
-        />
-        <MyListItem
-          id={"ITMS"}
-          label={"ITMS - TRAFFIC"}
-          content={
-            <div>
-              <ReactPlayer
-                style={{ padding: 0 }}
-                width={372}
-                height={"auto"}
-                url={
-                  "http://115.133.238.21:98/uploaded/video/KualaLumpur/cctv2.mp4"
-                }
-                playing={true}
-                loop={true}
-                muted={true}
-                autoPlay={true}
-                controls={false}
-              />
-            </div>
-          }
-        />
+        <MyListItem label={"RADAR"} content={<ChartPie1 />} />
+        <MyListItem label={"AIRCRAFT"} content={<BarChart1 />} />
+        <MyListItem label={"SHIP"} content={<LineGauge />} />
+        <MyListItem label={"FIRE POWER"} content={<CircularGauge />} />
+        <MyListItem label={"LOGISTICS"} content={<Sparkline />} />
+        <MyListItem label={"MOBILITY"} content={<BarChart1 />} />
 
-        <MyListItem
-          id={"IPDRS"}
-          label={"IPDRS - ENFORCEMENTS"}
-          content={
+        <ListItem>
+          <div>
             <img
-              src={"img/content/crime/monitoring.gif"}
+              src={"img/gif/chart1.gif"}
               width="450px"
               height="auto"
               object-fit="contain"
             />
-          }
-        />
-        <MyListItem
-          id={"ICMS"}
-          label={"ICMS - COMPLAINTS"}
-          content={
+          </div>
+        </ListItem>
+
+        <ListItem>
+          <div>
             <img
-              src={"img/content/complaints/monitoring.gif"}
+              src={"img/gif/chart2.gif"}
               width="450px"
               height="auto"
               object-fit="contain"
             />
-          }
-        />
-        {/* <MyListItem
-          label={"WEATHER"}
-          content={
-            <img
-              src={"img/content/chart13.png"}
-              width="450px"
-              height="auto"
-              object-fit="contain"
-            />
-          }
-        /> */}
+          </div>
+        </ListItem>
       </List>
     </div>
   );
 
   return (
-    // <animated.div style={animLayout}>
     <div
     // style={{
     //   position: "absolute",
-    //   width: 400,
     //   height: window.innerHeight,
-    //   backgroundColor: "rgba(0,0,0,0)",
-    //   marginLeft: window.innerWidth - 410,
-    //   marginTop: -50 - window.innerHeight,
+    //   marginLeft: 5,
+    //   marginTop: -980,
     //   backdropFilter: "blur(5px)",
-    //   backgroundColor: "rgba(0, 0, 0, 0.6)",
+    //   backgroundColor: "rgba(0, 0, 0, 0.3)",
     // }}
     >
       <Content />
     </div>
-    // </animated.div>
   );
 }

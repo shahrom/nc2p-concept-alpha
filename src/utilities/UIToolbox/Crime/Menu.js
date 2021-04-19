@@ -18,12 +18,7 @@ import Chip from "@material-ui/core/Chip";
 
 // icons
 import InfoIcon from "@material-ui/icons/Info";
-import FolderIcon from "@material-ui/icons/Folder";
-import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
-import BorderColorIcon from "@material-ui/icons/BorderColor";
-import FormatListBulletedIcon from "@material-ui/icons/FormatListBulleted";
-import EqualizerIcon from "@material-ui/icons/Equalizer";
-import AppsIcon from "@material-ui/icons/Apps";
+import SearchIcon from "@material-ui/icons/Search";
 
 export default function CrisisManagement(props) {
   // 1
@@ -44,46 +39,19 @@ export default function CrisisManagement(props) {
   return (
     <animated.div style={animLayout}>
       <div>
-        <p style={{ color: "white", fontSize: 14 }}>
-          <span style={{ color: "white", fontSize: 24 }}>03</span>/CRIME
-          PREVENTION
+        <p style={{ color: "gray", fontSize: 14 }}>
+          <span style={{ color: "gray", fontSize: 14 }}>NAVY</span>/READINESS
         </p>
 
-        <div style={childrenSideBySideStyle}>
-          <Chip
-            style={{ color: "gray", borderColor: "gray" }}
-            label="ROBBERY"
-            variant="outlined"
-            size="small"
-          />
-          <div style={{ width: 10 }} />
-          <Chip
-            style={{ color: "gray", borderColor: "gray" }}
-            label="THEFT"
-            variant="outlined"
-            size="small"
-          />
-          <div style={{ width: 10 }} />
-          <Chip
-            style={{ color: "gray", borderColor: "gray" }}
-            label="BREAK-IN"
-            variant="outlined"
-            size="small"
-          />
-        </div>
-        <br />
-        <br />
-
-        {/* // Title */}
         <span
           style={{
             fontFamily: "Barlow",
-            color: "orange",
+            color: "#0375ED",
             fontSize: 35,
             fontWeight: 500,
           }}
         >
-          CRIME
+          NAVY
           <span
             style={{
               fontFamily: "Barlow",
@@ -92,16 +60,16 @@ export default function CrisisManagement(props) {
               fontWeight: 100,
             }}
           >
-            PREVENTION
+            READINESS
           </span>
         </span>
         <br />
 
-        <div>
+        <div style={{ marginLeft: 60, padding: 20 }}>
           <img
-            src={"img/content/status/main.jpg"}
-            width="100%"
-            height="auto"
+            src={"img/logo/tl.png"}
+            width="120px"
+            height="120px"
             object-fit="contain"
           />
         </div>
@@ -110,29 +78,28 @@ export default function CrisisManagement(props) {
 
         <div style={childrenSideBySideStyle}>
           <Button
-            onClick={() => props.handleSlideIndex(1)}
             style={{
               outline: "none",
               color: "cyan",
               borderColor: "gray",
             }}
             variant="outlined"
-            startIcon={<AppsIcon />}
+            startIcon={<SearchIcon />}
           >
-            Slide 1
+            Search
           </Button>
-          <div style={{ width: 10 }} />
+          <div style={{ width: 5 }} />
           <Button
-            onClick={() => props.handleSlideIndex(2)}
             style={{
               outline: "none",
               color: "cyan",
               borderColor: "gray",
+              backgroundColor: "rgba(255,255,255,0.2)",
+              width: 150,
             }}
             variant="outlined"
-            startIcon={<EqualizerIcon />}
           >
-            Slide 2
+            MAWILLA 1
           </Button>
         </div>
 
@@ -141,11 +108,41 @@ export default function CrisisManagement(props) {
         <Button
           style={{ border: "none", outline: "none", color: "#0375ED" }}
           startIcon={<InfoIcon />}
-          onClick={() => {
-            window.ViewStateManager.SetContent("CRIME-INFO");
-          }}
+          onClick={() => props.handleSlideIndex(1)}
         >
-          Detail Info
+          Full Mission Capable (CAT 1 & 2)
+        </Button>
+        <br />
+        <Button
+          style={{ border: "none", outline: "none", color: "#0375ED" }}
+          startIcon={<InfoIcon />}
+          onClick={() => props.handleSlideIndex(2)}
+        >
+          Limited Operational Availability (CAT 1,2 & 3)
+        </Button>
+        <br />
+        <Button
+          style={{ border: "none", outline: "none", color: "gray" }}
+          startIcon={<InfoIcon />}
+          // onClick={() => props.handleSlideIndex(3)}
+        >
+          MTL
+        </Button>
+        <br />
+        <Button
+          style={{ border: "none", outline: "none", color: "gray" }}
+          startIcon={<InfoIcon />}
+          // onClick={() => props.handleSlideIndex(3)}
+        >
+          MAWILLA 1
+        </Button>
+        <br />
+        <Button
+          style={{ border: "none", outline: "none", color: "gray" }}
+          startIcon={<InfoIcon />}
+          // onClick={() => props.handleSlideIndex(4)}
+        >
+          MAWILLA 2
         </Button>
       </div>
     </animated.div>

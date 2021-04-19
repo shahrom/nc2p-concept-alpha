@@ -42,19 +42,19 @@ export default function CrisisManagement(props) {
     <animated.div style={animLayout}>
       <div>
         <p style={{ color: "gray", fontSize: 14 }}>
-          <span style={{ color: "gray", fontSize: 14 }}>AIRFORCE</span>
+          <span style={{ color: "gray", fontSize: 14 }}>JOINTFORCE</span>
           /READINESS
         </p>
 
         <span
           style={{
             fontFamily: "Barlow",
-            color: "#42A9AD",
+            color: "purple",
             fontSize: 35,
             fontWeight: 500,
           }}
         >
-          AIRFORCE
+          JOINTFORCE
           <span
             style={{
               fontFamily: "Barlow",
@@ -71,9 +71,9 @@ export default function CrisisManagement(props) {
 
         <div style={{ marginLeft: 60, padding: 20 }}>
           <img
-            src={"img/logo/tu.png"}
-            width="150px"
-            height="150px"
+            src={"img/logo/atb.png"}
+            width="200px"
+            height="200px"
             object-fit="contain"
           />
         </div>
@@ -103,7 +103,7 @@ export default function CrisisManagement(props) {
             }}
             variant="outlined"
           >
-            MTU
+            MK AB
           </Button>
         </div>
 
@@ -114,7 +114,7 @@ export default function CrisisManagement(props) {
           startIcon={<InfoIcon />}
           onClick={() => props.handleSlideIndex(1)}
         >
-          Aircraft Readiness
+          Boat Readiness
         </Button>
         <br />
         <Button
@@ -130,17 +130,8 @@ export default function CrisisManagement(props) {
           startIcon={<InfoIcon />}
           // onClick={() => props.handleSlideIndex(3)}
         >
-          Aircraft Type Status Summary
+          Reports
         </Button>
-        <br />
-        <Button
-          style={{ border: "none", outline: "none", color: "gray" }}
-          startIcon={<InfoIcon />}
-          // onClick={() => props.handleSlideIndex(3)}
-        >
-          Radar Status Summary
-        </Button>
-        <br />
       </div>
     </animated.div>
   );

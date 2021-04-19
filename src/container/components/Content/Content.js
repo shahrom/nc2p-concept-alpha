@@ -19,15 +19,16 @@ import { useMediaQuery } from "react-responsive";
 import ViewState from "./ViewState";
 import Status from "./components/Status/Status";
 import Crime from "./components/Crime/Crime";
-import Crisis from "./components/Crisis/Crisis";
+import Army from "./components/Army/Army";
 import Complaints from "./components/Complaints/Complaints";
+import ATB from "./components/ATB/ATB";
 
 import CrimeInfo from "./components/CrimeInfo/CrimeInfo";
-import CrisisInfo from "./components/CrisisInfo/CrisisInfo";
+// import ArmyInfo from "./components/ArmyInfo/ArmyInfo";
 import ComplaintsInfo from "./components/ComplaintsInfo/ComplaintsInfo";
 import Monitoring from "./components/Monitoring/Monitoring";
 
-import CrisisDetail from "./components/CrisisDetail/CrisisDetail";
+// import ArmyDetail from "./components/ArmyDetail/ArmyDetail";
 import CrimeDetail from "./components/CrimeDetail/CrimeDetail";
 
 import IVSSDetail from "./components/IVSSDetail/IVSSDetail";
@@ -88,19 +89,15 @@ export default function MainContainerView() {
         </div>
       );
       break;
-    case "CRISIS":
-      selectedDisplay = <Crisis />;
+    case "ARMY":
+      selectedDisplay = <Army />;
       break;
-    case "CRISIS-INFO":
-      selectedDisplay = (
-        <div>
-          <CrisisInfo />
-          <CrisisDetail />
-        </div>
-      );
-      break;
+
     case "COMPLAINTS":
       selectedDisplay = <Complaints />;
+      break;
+    case "ATB":
+      selectedDisplay = <ATB />;
       break;
     case "COMPLAINTS-INFO":
       selectedDisplay = <ComplaintsInfo />;

@@ -38,7 +38,9 @@ export default function LeftPanel() {
       <div
         style={{
           backgroundColor:
-            props.title === true ? "rgba(40,133,222,0.8)" : "rgba(40,133,222,0.3)",
+            props.title === true
+              ? "rgba(40,133,222,0.8)"
+              : "rgba(40,133,222,0.3)",
         }}
       >
         <p
@@ -102,7 +104,7 @@ export default function LeftPanel() {
             fontWeight: 500,
           }}
         >
-          ALARMS
+          MENU
           <span
             style={{
               fontFamily: "Barlow",
@@ -131,7 +133,7 @@ export default function LeftPanel() {
             }}
             variant="outlined"
           >
-            ENFORCEMENT
+            MAP
           </Button>
         </ListItem>
         <ListItem>
@@ -146,7 +148,7 @@ export default function LeftPanel() {
             }}
             variant="outlined"
           >
-            DETECTION
+            OPERATION
           </Button>
         </ListItem>
         <ListItem>
@@ -161,7 +163,7 @@ export default function LeftPanel() {
             }}
             variant="outlined"
           >
-            FIRE
+            LOGISTICS
           </Button>
         </ListItem>
         <ListItem>
@@ -176,7 +178,7 @@ export default function LeftPanel() {
             }}
             variant="outlined"
           >
-            COMMUNITY
+            COMMUNICATION
           </Button>
         </ListItem>
         <ListItem>
@@ -191,7 +193,7 @@ export default function LeftPanel() {
             }}
             variant="outlined"
           >
-            PANIC BUTTON
+            HUMAN RESOURCE
           </Button>
         </ListItem>
         <ListItem>
@@ -206,18 +208,48 @@ export default function LeftPanel() {
             }}
             variant="outlined"
           >
-            SENSORS
+            REPORTS
+          </Button>
+        </ListItem>
+        <ListItem>
+          <Button
+            onClick={() => ZoomtoMap(6)}
+            style={{
+              width: "220px",
+              outline: "none",
+              color: "rgba(255,165,0,1)",
+              borderColor: "rgba(255,165,0,0.5)",
+              backgroundColor: "rgba(255,165,0,0.1)",
+            }}
+            variant="outlined"
+          >
+            NOTIFICATIONS
+          </Button>
+        </ListItem>
+        <ListItem>
+          <Button
+            onClick={() => ZoomtoMap(6)}
+            style={{
+              width: "220px",
+              outline: "none",
+              color: "rgba(255,165,0,1)",
+              borderColor: "rgba(255,165,0,0.5)",
+              backgroundColor: "rgba(255,165,0,0.1)",
+            }}
+            variant="outlined"
+          >
+            ALERTS
           </Button>
         </ListItem>
 
-        <MyListItem label={"COMPLAINTS"} content={<ChartPie1 />} />
+        {/* <MyListItem label={"COMPLAINTS"} content={<ChartPie1 />} />
         <MyListItem label={"REPORTS"} content={<BarChart1 />} />
         <MyListItem label={"TRAFFIC"} content={<LineGauge />} />
         <MyListItem label={"CRIME RATE"} content={<CircularGauge />} />
         <MyListItem label={"RIVER SENSORS"} content={<Sparkline />} />
-        <MyListItem label={"DEVICES"} content={<BarChart1 />} />
+        <MyListItem label={"DEVICES"} content={<BarChart1 />} /> */}
 
-        <ListItem>
+        {/* <ListItem>
           <div>
             <img
               src={"img/gif/chart1.gif"}
@@ -237,7 +269,7 @@ export default function LeftPanel() {
               object-fit="contain"
             />
           </div>
-        </ListItem>
+        </ListItem> */}
       </List>
     </div>
   );

@@ -12,13 +12,14 @@
  */
 
 import React from "react";
-import Content1 from "./components/Content1";
+import Enforcement from "./components/Enforcement";
 
 export default function Slide1(props) {
   return (
     <div
       style={{
         backgroundColor: "rgba(17,21,30,0.7)",
+        height: 700,
       }}
     >
       <div>
@@ -31,9 +32,9 @@ export default function Slide1(props) {
             backgroundColor: "#0B3B84",
           }}
         >
-          SLIDE 1
+          SUMMARY - 19 RAMD
         </p>
-        <Content1 />
+        <Enforcement />
       </div>
     </div>
   );

@@ -16,8 +16,8 @@ import SwipeableViews from "react-swipeable-views";
 import Container from "@material-ui/core/Container";
 
 // components
-import Slide1 from "utilities/UIToolbox/Crisis/Slide1";
-import Slide2 from "utilities/UIToolbox/Crisis/Slide2";
+import Slide1 from "utilities/UIToolbox/ATB/Slide1";
+import Slide2 from "utilities/UIToolbox/ATB/Slide2";
 
 export default function Content(props) {
   return (
