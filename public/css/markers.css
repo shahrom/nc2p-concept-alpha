@@ -1,0 +1,119 @@
+/*
+ * --------------------------------------------------------------------
+ * Project: LCAD
+ * Version: 0.1.1
+ * File: markers.css
+ * Created: Tuesday, 10th March 2020 11:42:40 am
+ * Modified: Tuesday, 10th March 2020 11:42:40 am
+ * Author: Shahrom Azmi Nazeer (shahrom@scs.my)
+ * 
+ * Copyright (C) 2020 - System Consultancy Services Sdn. Bhd.
+ * --------------------------------------------------------------------
+ */
+
+.marker {
+  background-image: url("../img/markers/accident32.png");
+  background-size: cover;
+  width: 32px;
+  height: 44px;
+  /*border-radius: 50%;*/
+  cursor: pointer;
+}
+
+.mpv {
+  background-image: url("../img/markers/mpv_icon32.png");
+  background-size: cover;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.urb {
+  background-image: url("../img/markers/urb_icon32.png");
+  background-size: cover;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.mob {
+  background-image: url("../img/markers/mob_icon32.png");
+  background-size: cover;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.cctv_blink {
+  background-image: url("../img/markers/cctv/cctv_icon64_red_blink.gif");
+  background-size: cover;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.sensor {
+  background-image: url("../img/markers/red_pulse6.gif");
+  background-size: cover;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.robbery {
+  background-image: url("../img/markers/red_pulse64.gif");
+  background-size: cover;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.report {
+  background-image: url("../img/markers/red_pulse64.gif");
+  background-size: cover;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.cctv {
+  background-image: url("../img/markers/cctv/cctv_icon32.png");
+  background-size: cover;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.fire {
+  background-image: url("../img/markers/red_circle_fire32.png");
+  background-size: cover;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.fire_pulse {
+  background-image: url("../img/markers/loading_circle.gif");
+  background-size: cover;
+  width: 54px;
+  height: 54px;
+  cursor: pointer;
+  margin-left: -20px;
+}
+
+.fire_truck {
+  background-image: url("../img/markers/dispatch.png");
+  background-size: cover;
+  width: 32px;
+  height: 44px;
+  cursor: pointer;
+  margin-top: 0px;
+}
+
+.bbp {
+  background-image: url("../img/markers/balaibomba64.png");
+  background-size: cover;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}

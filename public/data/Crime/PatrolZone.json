@@ -1,0 +1,10 @@
+[
+	{"ZoneId": 1,"Name": "ZONE 1", "Total": 10, "PPM": 8, "APMM": 13, "TDM": 16, "CCTV": 22 },
+	{"ZoneId": 2,"Name": "ZONE 2", "Total": 6, "PPM": 8, "APMM": 11, "TDM": 14, "CCTV": 17 },
+	{"ZoneId": 3,"Name": "ZONE 3", "Total": 12, "PPM": 6, "APMM": 6, "TDM": 14, "CCTV": 16 },
+	{"ZoneId": 4,"Name": "ZONE 4", "Total": 10, "PPM": 8, "APMM": 8, "TDM": 21, "CCTV": 23},
+	{"ZoneId": 5,"Name": "ZONE 5", "Total": 16, "PPM": 7, "APMM": 12, "TDM": 14, "CCTV": 16 },
+	{"ZoneId": 6,"Name": "ZONE 6", "Total": 16, "PPM": 8, "APMM": 8, "TDM": 17, "CCTV": 23 },
+	{"ZoneId": 7,"Name": "ZONE 7", "Total": 10, "PPM": 7, "APMM": 10, "TDM": 18, "CCTV": 17 }
+]
+

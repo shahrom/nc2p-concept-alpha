@@ -1,0 +1,16 @@
+[
+    {"ReportId": 1,  "Latitude":1.568825351778306,       "Longitude":110.38285856865056, "Location":"Kampung Bintawa"},
+    {"ReportId": 2,  "Latitude":1.5521422940754872,      "Longitude":110.36487263200225, "Location":"Jalan Padungan, Kuching, Sarawak"},
+    {"ReportId": 3,  "Latitude":1.546392,                "Longitude":110.333515,         "Location":"Kedai Emas Sri Permaisuri, Jalan Pisang"},
+    {"ReportId": 4,  "Latitude":1.557683,                "Longitude": 110.346673,        "Location":"Jalan Wawasan, Kuching, Sarawak"},
+    {"ReportId": 5,  "Latitude":1.551605,                "Longitude": 110.327198,        "Location":"Jalan Rubber Barat, Kuching, Sarawak"},
+    {"ReportId": 6,  "Latitude":1.553283,                "Longitude": 110.332799,        "Location":"Jalan Satok, Kuching, Sarawak"},
+    {"ReportId": 7,  "Latitude":1.556636,                "Longitude": 110.330768,        "Location":"Jalan Laruh, Kuching, Sarawak"},
+    {"ReportId": 8,  "Latitude":1.543855364040304,       "Longitude": 110.35065898672573,"Location":"Jalan Laruh, Kuching, Sarawak"},
+    {"ReportId": 9,  "Latitude": 1.5339025951295813,     "Longitude":110.34276256338589, "Location":"Jalan Laruh, Kuching, Sarawak"},
+    {"ReportId": 10, "Latitude": 1.5278965914730678,     "Longitude":110.32799968496792, "Location":"Jalan Laruh, Kuching, Sarawak"},
+    {"ReportId": 11, "Latitude": 1.5206893649245,        "Longitude":110.33143291250698, "Location":"Jalan Laruh, Kuching, Sarawak"},
+    {"ReportId": 12, "Latitude": 1.5251509842044937,     "Longitude":110.33932933584683, "Location":"Jalan Laruh, Kuching, Sarawak"}
+]
+
+

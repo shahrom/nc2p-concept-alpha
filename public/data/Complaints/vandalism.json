@@ -1,0 +1,25 @@
+[
+
+  {"IncidentTypeName": "VANDALISM",  "Lat":1.5514915086130816,     "Lng":110.35177478567593,      "District": "SEKAMA",                    "DispatchDate": "07/01/2018", "DispatchTime": "12:01:18 PM",               "IncidentLocation": "12A1, Jalan Perhentian, Sentul, 51100 Kuala Lumpur" },
+  {"IncidentTypeName": "VANDALISM",  "Lat":1.5489175303694498,     "Lng":110.35606632009976,      "District": "TAMAN PUTIH",                    "DispatchDate": "07/10/2018", "DispatchTime": "10:17:18 AM",               "IncidentLocation": "12A1, Jalan Perhentian, Sentul, 51100 Kuala Lumpur" },
+
+
+  {"IncidentTypeName": "VANDALISM",  "Lat":1.534245794829951,      "Lng":110.34336337820523,    "District": "SEKAMA",                    "DispatchDate": "07/17/2018", "DispatchTime": "11:11:18 PM",               "IncidentLocation": "12A1, Jalan Perhentian, Sentul, 51100 Kuala Lumpur" },
+  {"IncidentTypeName": "VANDALISM",  "Lat":1.5395653831370502,     "Lng":110.39340266958706,    "District": "SEKAMA",                    "DispatchDate": "07/25/2018", "DispatchTime": "3:23:43 PM",                "IncidentLocation": "12A1, Jalan Perhentian, Sentul, 51100 Kuala Lumpur" },
+  {"IncidentTypeName": "VANDALISM",  "Lat":1.5436837649702457,     "Lng":110.37812480703823,      "District": "WESTWOOD",  "DispatchDate": "07/26/2018", "DispatchTime": "12:56:48 PM",               "IncidentLocation": "12A1, Jalan Perhentian, Sentul, 51100 Kuala Lumpur" },
+
+
+  {"IncidentTypeName": "VANDALISM", "Lat":1.5434263663391539,     "Lng":110.36147365347378,     "District": "TABUAN JAYA",                  "DispatchDate": "07/27/2018", "DispatchTime": "7:32:24 PM",                "IncidentLocation": "12A1, Jalan Perhentian, Sentul, 51100 Kuala Lumpur" },
+  {"IncidentTypeName": "VANDALISM", "Lat":1.5388789853907336,     "Lng":110.36327609793179,     "District": "SEKAMA",                    "DispatchDate": "07/8/2018", "DispatchTime": "3:23:43 PM",                 "IncidentLocation": "12A1, Jalan Perhentian, Sentul, 51100 Kuala Lumpur" },
+  {"IncidentTypeName": "VANDALISM", "Lat":1.5368197908267776,     "Lng":110.36387691275112,       "District": "HAPPY GARDEN",                  "DispatchDate": "07/26/2018", "DispatchTime": "2:56:48 PM",                "IncidentLocation": "12A1, Jalan Perhentian, Sentul, 51100 Kuala Lumpur" },
+
+  {"IncidentTypeName": "VANDALISM",  "Lat":1.5331303956025095,     "Lng":110.36087283865444,     "District": "TABUAN JAYA",                  "DispatchDate": "07/27/2018", "DispatchTime": "7:32:24 PM",                "IncidentLocation": "12A1, Jalan Perhentian, Sentul, 51100 Kuala Lumpur" },
+  {"IncidentTypeName": "VANDALISM",  "Lat":1.5520921030861106,     "Lng":110.36422023550503,       "District": "HAPPY GARDEN",                    "DispatchDate": "07/26/2018", "DispatchTime": "2:56:48 PM",                "IncidentLocation": "12A1, Jalan Perhentian, Sentul, 51100 Kuala Lumpur" },
+
+  {"IncidentTypeName": "VANDALISM",     "Lat":1.5545802783707443,     "Lng":110.35804042593472,     "District": "TABUAN JAYA",                  "DispatchDate": "07/27/2018", "DispatchTime": "7:32:24 PM",                "IncidentLocation": "12A1, Jalan Perhentian, Sentul, 51100 Kuala Lumpur" },
+  {"IncidentTypeName": "VANDALISM",     "Lat":1.5478021388258596,     "Lng":110.38035640493862,     "District": "SEKAMA",                    "DispatchDate": "07/8/2018", "DispatchTime": "3:23:43 PM",                 "IncidentLocation": "12A1, Jalan Perhentian, Sentul, 51100 Kuala Lumpur" },
+  {"IncidentTypeName": "VANDALISM",     "Lat":1.5436837649702457,     "Lng":110.37966975943081,      "District": "HAPPY GARDEN",                    "DispatchDate": "07/26/2018", "DispatchTime": "2:56:48 PM",                "IncidentLocation": "12A1, Jalan Perhentian, Sentul, 51100 Kuala Lumpur" }
+
+  
+]
+
