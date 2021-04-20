@@ -16,60 +16,24 @@ import React from "react";
 // component
 import ACCBarChart from "./ACCBarChart";
 import CircularStatic from "./CircularStatic";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function VesselStatus(props) {
-  const MyListItem = (props) => (
-    <div
-      style={{
-        margin: 10,
-        textAlign: "center",
-        width: 100,
-      }}
-    >
-      <div style={{ backgroundColor: props.color }}>
-        <p
-          style={{
-            fontSize: "14px",
-            color: "white",
-            padding: 5,
-          }}
-        >
-          {props.label}
-        </p>
-      </div>
-      <div style={{ marginTop: -20 }}>{props.content}</div>
-    </div>
-  );
-
   const childrenSideBySideStyle = {
     display: "flex",
     flexDirection: "row",
   };
 
+  const isMobile = useMediaQuery("(max-width:768px)");
   return (
-    <div style={{ marginLeft: 70 }}>
+    <div style={{ marginLeft: isMobile ? 0 : 150 }}>
       <div style={childrenSideBySideStyle}>
-        <div style={{ width: 110 }} />
-        <CircularStatic
-          value={5}
-          max={5}
-          color={"orange"}
-          label={"TOTAL RADAR"}
-        />
-        <div style={{ width: 50 }} />
-        <CircularStatic
-          value={1}
-          max={5}
-          color={"#1BA716"}
-          label={"TOTAL SERVICEABLE"}
-        />
-        <div style={{ width: 50 }} />
-        <CircularStatic
-          value={20}
-          max={100}
-          color={"red"}
-          label={"% OVERALL"}
-        />
+        <div style={{ width: isMobile ? 10 : 110 }} />
+        <CircularStatic value={5} max={5} color={"orange"} label={"TOTAL RADAR"} />
+        <div style={{ width: 20 }} />
+        <CircularStatic value={1} max={5} color={"#1BA716"} label={"TOTAL SERVICEABLE"} />
+        <div style={{ width: 20 }} />
+        <CircularStatic value={20} max={100} color={"red"} label={"% OVERALL"} />
       </div>
 
       <hr
@@ -84,12 +48,8 @@ export default function VesselStatus(props) {
       <p style={{ color: "white", textAlign: "center", marginLeft: -30 }}>
         RADAR LOCATION
       </p>
-      <p style={{ color: "green", textAlign: "left", marginLeft: 0 }}>
-        Operational
-      </p>
-      <p style={{ color: "red", textAlign: "left", marginLeft: 0 }}>
-        Non-Operational
-      </p>
+      <p style={{ color: "green", textAlign: "left", marginLeft: 0 }}>Operational</p>
+      <p style={{ color: "red", textAlign: "left", marginLeft: 0 }}>Non-Operational</p>
 
       <div>
         <ACCBarChart />

@@ -12,45 +12,25 @@
  */
 
 import React from "react";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 // component
 import ACCBarChart from "./ACCBarChart";
 import CircularStatic from "./CircularStatic";
 
 export default function VesselStatus(props) {
-  const MyListItem = (props) => (
-    <div
-      style={{
-        margin: 10,
-        textAlign: "center",
-        width: 100,
-      }}
-    >
-      <div style={{ backgroundColor: props.color }}>
-        <p
-          style={{
-            fontSize: "14px",
-            color: "white",
-            padding: 5,
-          }}
-        >
-          {props.label}
-        </p>
-      </div>
-      <div style={{ marginTop: -20 }}>{props.content}</div>
-    </div>
-  );
-
   const childrenSideBySideStyle = {
     display: "flex",
     flexDirection: "row",
   };
 
+  const isMobile = useMediaQuery("(max-width:768px)");
+
   return (
-    <div style={{ marginLeft: 80 }}>
+    <div style={{ marginLeft: isMobile ? 0 : 80 }}>
       <div>
         <div style={childrenSideBySideStyle}>
-          <div style={{ width: 40 }} />
+          <div style={{ width: isMobile ? 0 : 40 }} />
           <CircularStatic
             value={79.1}
             max={100}
@@ -83,9 +63,7 @@ export default function VesselStatus(props) {
         }}
       />
 
-      <p style={{ color: "white", textAlign: "center", marginLeft: 0 }}>
-        ELEMENTS
-      </p>
+      <p style={{ color: "white", textAlign: "center", marginLeft: 0 }}>ELEMENTS</p>
       <div>
         <ACCBarChart />
         <br />

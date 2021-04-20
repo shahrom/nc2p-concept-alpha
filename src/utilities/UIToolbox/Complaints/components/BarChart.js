@@ -24,6 +24,7 @@ import {
   ResponsiveContainer,
   LabelList,
 } from "recharts";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function MyBarChart(props) {
   const [data, setData] = React.useState([]);
@@ -60,14 +61,16 @@ export default function MyBarChart(props) {
     );
   };
 
+  const isMobile = useMediaQuery("(max-width:768px)");
+
   return (
-    <div style={{ opacity: 0.8, marginLeft: 70 }}>
+    <div style={{ opacity: 0.8, marginLeft: isMobile ? 30 : 70 }}>
       <BarChart
-        width={600}
+        width={isMobile ? 450 : 600}
         height={300}
         data={data}
         layout="vertical"
-        margin={{ top: 15, right: 0, left: 90, bottom: 0 }}
+        margin={{ top: 15, right: 0, left: 90, bottom: isMobile ? 50 : 0 }}
       >
         <XAxis type="number" />
         <YAxis

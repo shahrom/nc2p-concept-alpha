@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Box from "@material-ui/core/Box";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 function CircularProgressWithLabel(props) {
   return (
@@ -10,23 +11,23 @@ function CircularProgressWithLabel(props) {
         <CircularProgress
           variant="determinate"
           value={100}
-          size={120}
+          size={100}
           style={{ color: "rgba(255,255,255,0.2)" }}
         />
       </Box>
       <Box position="relative" display="inline-flex">
         <CircularProgress
           variant="determinate"
-          value={(props.value / props.max) * 100}
-          size={120}
-          style={{ color: props.color, marginLeft: -120 }}
+          value={43}
+          size={100}
+          style={{ color: props.color, marginLeft: -100 }}
         />
         <p
           style={{
             color: props.color,
-            fontSize: 40,
-            marginLeft: -100,
-            marginTop: 38,
+            fontSize: 30,
+            marginLeft: -90,
+            marginTop: 35,
             width: 80,
           }}
         >
@@ -39,6 +40,7 @@ function CircularProgressWithLabel(props) {
 }
 
 export default function CircularStatic(props) {
+  const isMobile = useMediaQuery("(max-width:768px)");
   return (
     <CircularProgressWithLabel
       value={props.value}

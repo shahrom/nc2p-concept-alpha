@@ -16,60 +16,30 @@ import React from "react";
 // component
 import BarChart from "./BarChart";
 import CircularStatic from "./CircularStatic";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function VesselStatus(props) {
-  const MyListItem = (props) => (
-    <div
-      style={{
-        margin: 10,
-        textAlign: "center",
-        width: 100,
-      }}
-    >
-      <div style={{ backgroundColor: props.color }}>
-        <p
-          style={{
-            fontSize: "14px",
-            color: "white",
-            padding: 5,
-          }}
-        >
-          {props.label}
-        </p>
-      </div>
-      <div style={{ marginTop: -20 }}>{props.content}</div>
-    </div>
-  );
-
   const childrenSideBySideStyle = {
     display: "flex",
     flexDirection: "row",
   };
 
+  const isMobile = useMediaQuery("(max-width:768px)");
+
   return (
-    <div style={{ marginLeft: 50 }}>
+    <div style={{ marginLeft: isMobile ? -90 : 50 }}>
       <div style={childrenSideBySideStyle}>
-        <div style={{ width: 110 }} />
-        <CircularStatic
-          value={165}
-          max={300}
-          color={"orange"}
-          label={"TOTAL 1ST LINE"}
-        />
-        <div style={{ width: 50 }} />
+        <div style={{ width: isMobile ? 100 : 180 }} />
+        <CircularStatic value={165} max={300} color={"orange"} label={"TOTAL 1ST LINE"} />
+        <div style={{ width: 20 }} />
         <CircularStatic
           value={98}
           max={300}
           color={"#1BA716"}
           label={"TOTAL SERVICEABLE"}
         />
-        <div style={{ width: 50 }} />
-        <CircularStatic
-          value={59.4}
-          max={100}
-          color={"red"}
-          label={"% TOTAL 1ST LINE"}
-        />
+        <div style={{ width: 20 }} />
+        <CircularStatic value={59.4} max={100} color={"red"} label={"% TOTAL 1ST LINE"} />
       </div>
 
       <hr
@@ -81,9 +51,7 @@ export default function VesselStatus(props) {
         }}
       />
 
-      <p style={{ color: "white", textAlign: "center", marginLeft: 0 }}>
-        Aircraft Type
-      </p>
+      <p style={{ color: "white", textAlign: "center", marginLeft: 0 }}>Aircraft Type</p>
       <div>
         <BarChart />
         <br />

@@ -16,48 +16,23 @@ import React from "react";
 // component
 import Vessel from "./Vessel";
 import CircularStatic from "./CircularStatic";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function VesselStatus(props) {
-  const MyListItem = (props) => (
-    <div
-      style={{
-        margin: 10,
-        textAlign: "center",
-        width: 100,
-      }}
-    >
-      <div style={{ backgroundColor: props.color }}>
-        <p
-          style={{
-            fontSize: "14px",
-            color: "white",
-            padding: 5,
-          }}
-        >
-          {props.label}
-        </p>
-      </div>
-      <div style={{ marginTop: -20 }}>{props.content}</div>
-    </div>
-  );
-
   const childrenSideBySideStyle = {
     display: "flex",
     flexDirection: "row",
   };
 
+  const isMobile = useMediaQuery("(max-width:768px)");
+
   return (
-    <div style={{ marginLeft: 20 }}>
+    <div style={{ marginLeft: isMobile ? -30 : 80 }}>
       <div style={childrenSideBySideStyle}>
         <div style={{ width: 110 }} />
         <CircularStatic value={70.8} max={100} color={"cyan"} label={"ROVER"} />
         <div style={{ width: 50 }} />
-        <CircularStatic
-          value={77.8}
-          max={100}
-          color={"cyan"}
-          label={"BARACUDA"}
-        />
+        <CircularStatic value={77.8} max={100} color={"cyan"} label={"BARACUDA"} />
         <div style={{ width: 50 }} />
         <CircularStatic value={59.4} max={100} color={"cyan"} label={"RHIB"} />
         <div style={{ width: 50 }} />

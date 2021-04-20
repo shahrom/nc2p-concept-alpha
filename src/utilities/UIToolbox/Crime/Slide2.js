@@ -26,7 +26,7 @@ export default function Slide2(props) {
           style={{
             textAlign: "center",
             padding: 10,
-            fontSize: 28,
+            fontSize: 20,
             color: "white",
             backgroundColor: "#0B3B84",
           }}

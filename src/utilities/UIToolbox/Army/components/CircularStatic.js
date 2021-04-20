@@ -24,7 +24,7 @@ function CircularProgressWithLabel(props) {
         <p
           style={{
             color: props.color,
-            fontSize: 30,
+            fontSize: 25,
             marginLeft: -80,
             marginTop: 25,
             width: 80,

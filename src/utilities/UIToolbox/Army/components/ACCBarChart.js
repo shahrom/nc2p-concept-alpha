@@ -13,6 +13,7 @@
 
 import React from "react";
 import { BarChart, Bar, XAxis, YAxis } from "recharts";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function InspectionBarChart(props) {
   const [data, setData] = React.useState([]);
@@ -65,31 +66,61 @@ export default function InspectionBarChart(props) {
     }, 200);
   }, [props.index]);
 
+  const isMobile = useMediaQuery("(max-width:768px)");
+
   return (
-    <div style={{ marginLeft: 0 }}>
-      <BarChart
-        width={800}
-        height={350}
-        data={data}
-        margin={{ top: 55, right: 30, left: 0, bottom: 50 }}
-      >
-        <XAxis
-          dataKey="name"
-          tick={{
-            fontSize: 14,
-            fill: "rgba(255,255,255,0.8)",
-          }}
-        />
-        <YAxis
-          tick={{
-            fontSize: 14,
-            fill: "rgba(255,255,255,0.8)",
-          }}
-        />
-        <Bar dataKey="patrol" fill={COLORS[0]} />
-        <Bar dataKey="inspection" fill={COLORS[1]} />
-        <Bar dataKey="arrest" fill={COLORS[3]} />
-      </BarChart>
+    <div>
+      {isMobile ? (
+        <BarChart
+          width={450}
+          height={150}
+          data={data}
+          margin={{ top: 50, right: 0, left: 0, bottom: 0 }}
+          style={{ marginLeft: -10 }}
+        >
+          <XAxis
+            dataKey="name"
+            tick={{
+              fontSize: 14,
+              fill: "rgba(255,255,255,0.8)",
+            }}
+          />
+          <YAxis
+            tick={{
+              fontSize: 14,
+              fill: "rgba(255,255,255,0.8)",
+            }}
+          />
+          <Bar dataKey="patrol" fill={COLORS[0]} />
+          <Bar dataKey="inspection" fill={COLORS[1]} />
+          <Bar dataKey="arrest" fill={COLORS[3]} />
+        </BarChart>
+      ) : (
+        <BarChart
+          width={800}
+          height={350}
+          data={data}
+          margin={{ top: 55, right: 30, left: 0, bottom: 50 }}
+          style={{ marginLeft: -20 }}
+        >
+          <XAxis
+            dataKey="name"
+            tick={{
+              fontSize: 14,
+              fill: "rgba(255,255,255,0.8)",
+            }}
+          />
+          <YAxis
+            tick={{
+              fontSize: 14,
+              fill: "rgba(255,255,255,0.8)",
+            }}
+          />
+          <Bar dataKey="patrol" fill={COLORS[0]} />
+          <Bar dataKey="inspection" fill={COLORS[1]} />
+          <Bar dataKey="arrest" fill={COLORS[3]} />
+        </BarChart>
+      )}
     </div>
   );
 }

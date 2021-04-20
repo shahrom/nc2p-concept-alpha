@@ -16,6 +16,7 @@ import React from "react";
 // component
 import ACCBarChart from "./ACCBarChart";
 import CircularStatic from "./CircularStatic";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function VesselStatus(props) {
   const MyListItem = (props) => (
@@ -46,23 +47,15 @@ export default function VesselStatus(props) {
     flexDirection: "row",
   };
 
+  const isMobile = useMediaQuery("(max-width:768px)");
+
   return (
-    <div style={{ marginLeft: 170 }}>
+    <div style={{ marginLeft: isMobile ? -20 : 200 }}>
       <div style={childrenSideBySideStyle}>
         <div style={{ width: 110 }} />
-        <CircularStatic
-          value={25}
-          max={100}
-          color={"red"}
-          label={"RADAR SPEXER"}
-        />
+        <CircularStatic value={25} max={100} color={"red"} label={"RADAR SPEXER"} />
         <div style={{ width: 50 }} />
-        <CircularStatic
-          value={100}
-          max={100}
-          color={"#1BA716"}
-          label={"RADAR 1206"}
-        />
+        <CircularStatic value={100} max={100} color={"#1BA716"} label={"RADAR 1206"} />
       </div>
 
       <hr
@@ -77,12 +70,8 @@ export default function VesselStatus(props) {
       <p style={{ color: "white", textAlign: "center", marginLeft: -30 }}>
         RADAR LOCATION
       </p>
-      <p style={{ color: "green", textAlign: "left", marginLeft: 0 }}>
-        Operational
-      </p>
-      <p style={{ color: "orange", textAlign: "left", marginLeft: 0 }}>
-        Limited
-      </p>
+      <p style={{ color: "green", textAlign: "left", marginLeft: 0 }}>Operational</p>
+      <p style={{ color: "orange", textAlign: "left", marginLeft: 0 }}>Limited</p>
 
       <div>
         <ACCBarChart />
