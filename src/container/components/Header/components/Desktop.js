@@ -25,7 +25,7 @@ import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import SearchIcon from "@material-ui/icons/Search";
 import ViewListIcon from "@material-ui/icons/ViewList";
 
-export default function Landscape() {
+export default function Desktop() {
   // 1
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("DASHBOARD");
@@ -147,9 +147,7 @@ export default function Landscape() {
             <Tab
               style={{ minWidth: 150, outline: "none" }}
               label={
-                <p style={{ marginTop: 5, fontSize: 16, color: "cyan" }}>
-                  READINESS
-                </p>
+                <p style={{ marginTop: 5, fontSize: 16, color: "cyan" }}>READINESS</p>
               }
               value={"STATUS"}
             />
@@ -165,18 +163,14 @@ export default function Landscape() {
             <Tab
               style={{ minWidth: 150, outline: "none" }}
               label={
-                <p style={{ marginTop: 5, fontSize: 16, color: "lime" }}>
-                  PLANNING
-                </p>
+                <p style={{ marginTop: 5, fontSize: 16, color: "lime" }}>PLANNING</p>
               }
               value={"STATUS"}
             />
             <Tab
               style={{ minWidth: 150, outline: "none" }}
               label={
-                <p style={{ marginTop: 5, fontSize: 16, color: "yellow" }}>
-                  COMMAND
-                </p>
+                <p style={{ marginTop: 5, fontSize: 16, color: "yellow" }}>COMMAND</p>
               }
               value={"MONITORING"}
             />

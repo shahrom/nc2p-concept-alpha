@@ -13,65 +13,59 @@
 
 import React from "react";
 import Button from "@material-ui/core/Button";
-import Chip from "@material-ui/core/Chip";
-import ScrollText from "react-scroll-text";
 
 // icons
 import InfoIcon from "@material-ui/icons/Info";
 import EqualizerIcon from "@material-ui/icons/Equalizer";
 import AppsIcon from "@material-ui/icons/Apps";
 
-export default function CrisisManagement(props) {
+export default function Menu1(props) {
   return (
     <div
       style={{
-        backgroundColor: "rgba(128,0,128,0.3)",
+        backgroundColor: "rgba(75,100,0,0.5)",
         padding: 20,
         height: 500,
       }}
     >
-      <p style={{ color: "gray", fontSize: 14 }}>
-        <span style={{ color: "gray", fontSize: 24 }}></span>ANGKATAN TENTERA
-        BERSAMA
-      </p>
+      <div>
+        <p style={{ color: "gray", fontSize: 14 }}>
+          <span style={{ color: "gray", fontSize: 24 }}></span>TENTERA DARAT DIRAJA
+          MALAYSIA
+        </p>
 
-      <span
-        style={{
-          fontFamily: "Barlow",
-          color: "purple",
-          fontSize: 25,
-          fontWeight: 500,
-        }}
-      >
-        JOINTFORCE
         <span
           style={{
             fontFamily: "Barlow",
-            color: "white",
-            fontSize: 24,
-            fontWeight: 100,
+            color: "lime",
+            fontSize: 25,
+            fontWeight: 500,
           }}
-        ></span>
-      </span>
+        >
+          ARMY
+          <span
+            style={{
+              fontFamily: "Barlow",
+              color: "white",
+              fontSize: 24,
+              fontWeight: 100,
+            }}
+          ></span>
+        </span>
 
-      <br />
-      <hr style={{ borderColor: "gray" }} />
-      <br />
+        <br />
+        <hr style={{ borderColor: "gray" }} />
+        <br />
+      </div>
 
       <div style={{ textAlign: "center" }}>
-        <img
-          src={"img/logo/atb.png"}
-          width="300px"
-          height="300px"
-          object-fit="contain"
-        />
-        <br />
+        <img src={"img/logo/td.png"} width={"150px"} height="auto" object-fit="contain" />
         <br />
         <br />
         <br />
         <Button
           onClick={() => {
-            window.ViewStateManager.SetContent("ATB");
+            window.ViewStateManager.SetContent("ARMY");
           }}
           style={{
             outline: "none",

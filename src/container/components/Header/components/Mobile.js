@@ -27,7 +27,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import ViewListIcon from "@material-ui/icons/ViewList";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
-export default function Potrait() {
+export default function Mobile() {
   // 1
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("DASHBOARD");

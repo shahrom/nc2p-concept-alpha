@@ -15,10 +15,11 @@ import React from "react";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 // components
-import Tablet from "./components/Tablet";
+import Desktop from "./components/Desktop";
 import Mobile from "./components/Mobile";
 
 export default function Header() {
+  // MediaQuery
   const isMobile = useMediaQuery("(max-width:768px)");
-  return <div>{isMobile ? <Mobile /> : <Tablet />}</div>;
+  return <div>{isMobile ? <Mobile /> : <Desktop />}</div>;
 }

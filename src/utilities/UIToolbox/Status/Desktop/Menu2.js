@@ -21,29 +21,21 @@ import InfoIcon from "@material-ui/icons/Info";
 import EqualizerIcon from "@material-ui/icons/Equalizer";
 import AppsIcon from "@material-ui/icons/Apps";
 
-export default function CrisisManagement(props) {
+export default function Menu2(props) {
   return (
-    <div
-      style={{
-        backgroundColor: "rgba(66,169,173,0.2)",
-        padding: 20,
-        height: 500,
-      }}
-    >
+    <div style={{ backgroundColor: "rgba(0,0,50,0.5)", padding: 20, height: 500 }}>
       <p style={{ color: "gray", fontSize: 14 }}>
-        <span style={{ color: "gray", fontSize: 24 }}></span>TENTERA UDARA
-        DIRAJA MALAYSIA
+        <span style={{ color: "gray", fontSize: 24 }}></span>TENTERA LAUT DIRAJA MALAYSIA
       </p>
-
       <span
         style={{
           fontFamily: "Barlow",
-          color: "#42A9AD",
+          color: "#0375ED",
           fontSize: 25,
           fontWeight: 500,
         }}
       >
-        AIRFORCE
+        NAVY
         <span
           style={{
             fontFamily: "Barlow",
@@ -59,19 +51,13 @@ export default function CrisisManagement(props) {
       <br />
 
       <div style={{ textAlign: "center" }}>
-        <img
-          src={"img/logo/tu.png"}
-          width="223px"
-          height="223px"
-          object-fit="contain"
-        />
-        <br />
+        <img src={"img/logo/tl.png"} width="173px" height="173px" object-fit="contain" />
         <br />
         <br />
         <br />
         <Button
           onClick={() => {
-            window.ViewStateManager.SetContent("COMPLAINTS");
+            window.ViewStateManager.SetContent("CRIME");
           }}
           style={{
             outline: "none",

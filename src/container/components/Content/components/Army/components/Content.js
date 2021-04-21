@@ -14,18 +14,23 @@
 import React from "react";
 import SwipeableViews from "react-swipeable-views";
 import Container from "@material-ui/core/Container";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 // components
-import Slide1 from "utilities/UIToolbox/Army/Slide1";
-import Slide2 from "utilities/UIToolbox/Army/Slide2";
+import MobileContent from "utilities/UIToolbox/Army/Mobile/Content";
+import DesktopContent from "utilities/UIToolbox/Army/Desktop/Content";
 
 export default function Content(props) {
+  // MediaQuery
+  const isMobile = useMediaQuery("(max-width:768px)");
+
   return (
     <Container maxWidth="md">
-      <SwipeableViews index={props.sliderIndex - 1}>
-        <Slide1 />
-        <Slide2 />
-      </SwipeableViews>
+      {isMobile ? (
+        <MobileContent handleSlideIndex={props.handleSlideIndex} />
+      ) : (
+        <DesktopContent handleSlideIndex={props.handleSlideIndex} />
+      )}
     </Container>
   );
 }

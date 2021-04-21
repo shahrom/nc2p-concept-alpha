@@ -55,8 +55,12 @@ class Main extends React.Component {
 
   // Refreshes the screen when the viewport changes
   componentDidMount() {
+    // Refreshes all the components to that they will get rendered acoording to the
+    // current viewport size
     window.addEventListener("resize", this.updateWindowDimensions.bind(this));
 
+    // Refreshes the screen when the viewport changes from Portrait to Landscape
+    // The previous method was to refresh the screen but we no longer have to do that
     window.addEventListener("orientationchange", function () {
       var originalBodyStyle = getComputedStyle(document.body).getPropertyValue("display");
       document.body.style.display = "none";
@@ -64,17 +68,8 @@ class Main extends React.Component {
         document.body.style.display = originalBodyStyle;
       }, 10);
     });
-
-    // window.addEventListener("click", function () {
-    //   var el = document.documentElement,
-    //     rfs =
-    //       el.requestFullscreen ||
-    //       el.webkitRequestFullScreen ||
-    //       el.mozRequestFullScreen ||
-    //       el.msRequestFullscreen;
-    //   rfs.call(el);
-    // });
   }
+
   updateWindowDimensions() {
     this.setState({
       updateScreen: true,

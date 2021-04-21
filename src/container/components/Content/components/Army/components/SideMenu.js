@@ -13,14 +13,23 @@
 
 import React from "react";
 import Container from "@material-ui/core/Container";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 // components
-import Menu from "utilities/UIToolbox/Army/Menu";
+import MobileMenu from "utilities/UIToolbox/Army/Mobile/Menu";
+import DesktopMenu from "utilities/UIToolbox/Army/Desktop/Menu";
 
 export default function SideMenu(props) {
+  // MediaQuery
+  const isMobile = useMediaQuery("(max-width:768px)");
+
   return (
     <Container maxWidth="md">
-      <Menu handleSlideIndex={props.handleSlideIndex} />
+      {isMobile ? (
+        <MobileMenu handleSlideIndex={props.handleSlideIndex} />
+      ) : (
+        <DesktopMenu handleSlideIndex={props.handleSlideIndex} />
+      )}
     </Container>
   );
 }
