@@ -3,8 +3,8 @@
  * Project:
  * Version: 0.1.1
  * File: Content.js
- * Created: Wednesday, 21st April 2021 2:07:06 pm
- * Modified: Wednesday, 21st April 2021 2:07:06 pm
+ * Created: Wednesday, 21st April 2021 2:07:23 pm
+ * Modified: Wednesday, 21st April 2021 2:07:23 pm
  * Author: Shahrom Azmi Nazeer (shahrom@scs.my)
  *
  * Copyright (C) 2021 - System Consultancy Services Sdn. Bhd.
@@ -17,14 +17,12 @@ import Container from "@material-ui/core/Container";
 
 // components
 import Slide1 from "./components/Slide1";
-import Slide2 from "./components/Slide2";
 
 export default function Content(props) {
   return (
     <Container maxWidth="md">
       <SwipeableViews index={props.sliderIndex - 1}>
         <Slide1 />
-        <Slide2 />
       </SwipeableViews>
     </Container>
   );

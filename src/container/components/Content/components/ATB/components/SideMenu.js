@@ -10,17 +10,25 @@
  * Copyright (C) 2021 - System Consultancy Services Sdn. Bhd.
  * --------------------------------------------------------------------
  */
-
 import React from "react";
 import Container from "@material-ui/core/Container";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 // components
-import Menu from "utilities/UIToolbox/ATB/Menu";
+import MobileMenu from "utilities/UIToolbox/ATB/Mobile/Menu";
+import DesktopMenu from "utilities/UIToolbox/ATB/Desktop/Menu";
 
 export default function SideMenu(props) {
+  // MediaQuery
+  const isMobile = useMediaQuery("(max-width:768px)");
+
   return (
     <Container maxWidth="md">
-      <Menu handleSlideIndex={props.handleSlideIndex} />
+      {isMobile ? (
+        <MobileMenu handleSlideIndex={props.handleSlideIndex} />
+      ) : (
+        <DesktopMenu handleSlideIndex={props.handleSlideIndex} />
+      )}
     </Container>
   );
 }

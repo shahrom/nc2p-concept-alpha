@@ -16,8 +16,8 @@ import Container from "@material-ui/core/Container";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 // components
-import MobileContent from "utilities/UIToolbox/ATB/Mobile/Content";
-import DesktopContent from "utilities/UIToolbox/ATB/Desktop/Content";
+import MobileContent from "utilities/UIToolbox/Navy/Mobile/Content";
+import DesktopContent from "utilities/UIToolbox/Navy/Desktop/Content";
 
 export default function Content(props) {
   // MediaQuery

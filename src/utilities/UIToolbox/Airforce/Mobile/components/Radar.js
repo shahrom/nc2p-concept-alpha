@@ -18,32 +18,32 @@ import Grid from "@material-ui/core/Grid";
 import ACCBarChart from "./ACCBarChart";
 import CircularStatic from "./CircularStatic";
 
-export default function Summary(props) {
+export default function VesselStatus(props) {
+  const childrenSideBySideStyle = {
+    display: "flex",
+    flexDirection: "row",
+  };
+
   return (
-    <div style={{ padding: 30 }}>
-      <Grid container justify="center" spacing={5}>
+    <div>
+      <Grid container justify="center" spacing={6}>
         <Grid item>
-          <CircularStatic
-            value={79.1}
-            max={100}
-            color={"orange"}
-            label={"CAPABILITY"}
-          />
+          <CircularStatic value={5} max={5} color={"orange"} label={"TOTAL"} />
         </Grid>
         <Grid item>
           <CircularStatic
-            value={88.9}
-            max={100}
+            value={1}
+            max={5}
             color={"#1BA716"}
-            label={"READINESS"}
+            label={"SERVICEABLE"}
           />
         </Grid>
         <Grid item>
           <CircularStatic
-            value={72.7}
+            value={20}
             max={100}
-            color={"orange"}
-            label={"SERVICEABILITY"}
+            color={"red"}
+            label={"% OVERALL"}
           />
         </Grid>
       </Grid>
@@ -53,11 +53,11 @@ export default function Summary(props) {
           backgroundColor: "gray",
           margin: 30,
           opacity: 0.2,
+          marginLeft: -140,
         }}
       />
 
       <ACCBarChart />
-      <br />
     </div>
   );
 }

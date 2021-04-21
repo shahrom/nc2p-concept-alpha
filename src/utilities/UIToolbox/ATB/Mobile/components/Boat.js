@@ -15,35 +15,50 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 
 // component
-import ACCBarChart from "./ACCBarChart";
+import Vessel from "./Vessel";
 import CircularStatic from "./CircularStatic";
 
-export default function Summary(props) {
+export default function VesselStatus(props) {
+  const childrenSideBySideStyle = {
+    display: "flex",
+    flexDirection: "row",
+  };
+
   return (
     <div style={{ padding: 30 }}>
       <Grid container justify="center" spacing={5}>
         <Grid item>
           <CircularStatic
-            value={79.1}
+            value={70.8}
             max={100}
-            color={"orange"}
-            label={"CAPABILITY"}
+            color={"cyan"}
+            label={"ROVER"}
           />
         </Grid>
         <Grid item>
           <CircularStatic
-            value={88.9}
+            value={77.8}
             max={100}
-            color={"#1BA716"}
-            label={"READINESS"}
+            color={"cyan"}
+            label={"BARACUDA"}
+          />
+        </Grid>
+      </Grid>
+      <Grid container justify="center" spacing={5}>
+        <Grid item>
+          <CircularStatic
+            value={59.4}
+            max={100}
+            color={"cyan"}
+            label={"RHIB"}
           />
         </Grid>
         <Grid item>
           <CircularStatic
-            value={72.7}
+            value={50.2}
             max={100}
-            color={"orange"}
-            label={"SERVICEABILITY"}
+            color={"cyan"}
+            label={"VIPER"}
           />
         </Grid>
       </Grid>
@@ -56,8 +71,7 @@ export default function Summary(props) {
         }}
       />
 
-      <ACCBarChart />
-      <br />
+      <Vessel />
     </div>
   );
 }

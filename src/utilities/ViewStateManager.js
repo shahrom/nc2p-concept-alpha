@@ -13,19 +13,10 @@
 
 // componnets viewStates
 import ContentState from "container/components/Content/ViewState";
-import StatusState from "container/components/Content/components/Status/ViewState";
-import CrimeState from "container/components/Content/components/Crime/ViewState";
+import ReadinessState from "container/components/Content/components/Readiness/ViewState";
+import NavyState from "container/components/Content/components/Navy/ViewState";
 import ArmyState from "container/components/Content/components/Army/ViewState";
 import FooterState from "container/components/Footer/ViewState";
-
-// import ArmyDetail from "container/components/Content/components/ArmyDetail/ViewState";
-import CrimeDetail from "container/components/Content/components/CrimeDetail/ViewState";
-
-import IVSSDetail from "container/components/Content/components/IVSSDetail/ViewState";
-import ITMSDetail from "container/components/Content/components/ITMSDetail/ViewState";
-import ICMSDetail from "container/components/Content/components/ICMSDetail/ViewState";
-import IPDRSDetail from "container/components/Content/components/IPDRSDetail/ViewState";
-import IERSDetail from "container/components/Content/components/IERSDetail/ViewState";
 
 let instance = null;
 
@@ -34,18 +25,10 @@ export default class ViewStateManager {
     if (!instance) {
       // Register all the ViewState that needs to be accessed globaly
       this.contentState = new ContentState();
-      this.dashboardState = new StatusState();
-      this.crimeState = new CrimeState();
+      this.dashboardState = new ReadinessState();
+      this.navyState = new NavyState();
       this.crisisState = new ArmyState();
       this.footerState = new FooterState();
-      // this.crisisDetail = new ArmyDetail();
-      this.crimeDetail = new CrimeDetail();
-
-      this.ivssDetail = new IVSSDetail();
-      this.itmsDetail = new ITMSDetail();
-      this.icmsDetail = new ICMSDetail();
-      this.ipdrsDetail = new IPDRSDetail();
-      this.iersDetail = new IERSDetail();
 
       window.MessageDispatcher.SubscribeDispatcher(
         "ViewStateManager",
@@ -80,7 +63,7 @@ export default class ViewStateManager {
   }
 
   DisplayZoneDetail(id) {
-    this.crimeDetail.SetOpen(id);
+    this.navyDetail.SetOpen(id);
   }
 
   DisplayIVSSDetail(id) {

@@ -18,32 +18,47 @@ import Grid from "@material-ui/core/Grid";
 import ACCBarChart from "./ACCBarChart";
 import CircularStatic from "./CircularStatic";
 
-export default function Summary(props) {
+export default function VesselStatus(props) {
+  const MyListItem = (props) => (
+    <div
+      style={{
+        margin: 10,
+        textAlign: "center",
+        width: 100,
+      }}
+    >
+      <div style={{ backgroundColor: props.color }}>
+        <p
+          style={{
+            fontSize: "14px",
+            color: "white",
+            padding: 5,
+          }}
+        >
+          {props.label}
+        </p>
+      </div>
+      <div style={{ marginTop: -20 }}>{props.content}</div>
+    </div>
+  );
+
   return (
     <div style={{ padding: 30 }}>
       <Grid container justify="center" spacing={5}>
         <Grid item>
           <CircularStatic
-            value={79.1}
+            value={25}
             max={100}
-            color={"orange"}
-            label={"CAPABILITY"}
+            color={"red"}
+            label={"RADAR SPEXER"}
           />
         </Grid>
         <Grid item>
           <CircularStatic
-            value={88.9}
+            value={100}
             max={100}
             color={"#1BA716"}
-            label={"READINESS"}
-          />
-        </Grid>
-        <Grid item>
-          <CircularStatic
-            value={72.7}
-            max={100}
-            color={"orange"}
-            label={"SERVICEABILITY"}
+            label={"RADAR 1206"}
           />
         </Grid>
       </Grid>
@@ -57,7 +72,6 @@ export default function Summary(props) {
       />
 
       <ACCBarChart />
-      <br />
     </div>
   );
 }

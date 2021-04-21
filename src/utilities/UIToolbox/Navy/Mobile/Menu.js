@@ -16,6 +16,7 @@ import Button from "@material-ui/core/Button";
 
 // icons
 import SearchIcon from "@material-ui/icons/Search";
+import InfoIcon from "@material-ui/icons/Info";
 
 export default function Menu(props) {
   const childrenSideBySideStyle = {
@@ -28,7 +29,7 @@ export default function Menu(props) {
       <br />
       <div style={childrenSideBySideStyle}>
         <img
-          src={"img/logo/td.png"}
+          src={"img/logo/tl.png"}
           width={"30px"}
           height="auto"
           object-fit="contain"
@@ -37,12 +38,12 @@ export default function Menu(props) {
         <span
           style={{
             fontFamily: "Barlow",
-            color: "lime",
+            color: "blue",
             fontSize: 24,
             fontWeight: 500,
           }}
         >
-          ARMY
+          NAVY
           <span
             style={{
               fontFamily: "Barlow",
@@ -80,7 +81,7 @@ export default function Menu(props) {
           }}
           variant="outlined"
         >
-          19 RAMD
+          MAWILLA 1
         </Button>
       </div>
     </div>

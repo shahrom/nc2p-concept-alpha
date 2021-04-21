@@ -2,9 +2,9 @@
  * --------------------------------------------------------------------
  * Project:
  * Version: 0.1.1
- * File: Content1.js
- * Created: Thursday, 1st April 2021 2:36:22 pm
- * Modified: Thursday, 1st April 2021 2:36:22 pm
+ * File: Content.js
+ * Created: Wednesday, 21st April 2021 9:15:25 pm
+ * Modified: Wednesday, 21st April 2021 10:05:13 pm
  * Author: Shahrom Azmi Nazeer (shahrom@scs.my)
  *
  * Copyright (C) 2021 - System Consultancy Services Sdn. Bhd.
@@ -12,7 +12,6 @@
  */
 
 import React from "react";
-import SwipeableViews from "react-swipeable-views";
 import Container from "@material-ui/core/Container";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 

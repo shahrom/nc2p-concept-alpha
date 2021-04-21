@@ -28,7 +28,7 @@ export default function Menu(props) {
       <br />
       <div style={childrenSideBySideStyle}>
         <img
-          src={"img/logo/td.png"}
+          src={"img/logo/tu.png"}
           width={"30px"}
           height="auto"
           object-fit="contain"
@@ -37,12 +37,12 @@ export default function Menu(props) {
         <span
           style={{
             fontFamily: "Barlow",
-            color: "lime",
+            color: "cyan",
             fontSize: 24,
             fontWeight: 500,
           }}
         >
-          ARMY
+          AIRFORCE
           <span
             style={{
               fontFamily: "Barlow",
@@ -80,7 +80,7 @@ export default function Menu(props) {
           }}
           variant="outlined"
         >
-          19 RAMD
+          MTU
         </Button>
       </div>
     </div>
