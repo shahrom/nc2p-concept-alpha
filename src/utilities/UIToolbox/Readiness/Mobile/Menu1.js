@@ -25,10 +25,18 @@ export default function Menu1(props) {
       <div
         onClick={() => {
           window.ViewStateManager.SetContent("ARMY");
+          // window.document.getElementById("myBody").style.transition = "all 2s";
+          // window.document.body.style.backgroundImage =
+          //   "url('img/wallpaper/gray.jpg')";
         }}
         style={{ textAlign: "center" }}
       >
-        <img src={"img/logo/td.png"} width={"100px"} height="auto" object-fit="contain" />
+        <img
+          src={"img/logo/td.png"}
+          width={"100px"}
+          height="auto"
+          object-fit="contain"
+        />
         <br />
         <span
           style={{

@@ -21,13 +21,13 @@ export default function InspectionBarChart(props) {
     var data = [
       {
         name: "SPEXER",
-        patrol: 33,
-        inspection: 67,
+        patrol: 25,
+        inspection: 75,
       },
       {
         name: "1206",
-        patrol: 95,
-        inspection: 5,
+        patrol: 100,
+        inspection: 0,
       },
     ];
 

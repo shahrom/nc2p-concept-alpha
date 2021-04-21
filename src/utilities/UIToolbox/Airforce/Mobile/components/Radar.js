@@ -26,7 +26,7 @@ export default function VesselStatus(props) {
 
   return (
     <div>
-      <Grid container justify="center" spacing={6}>
+      <Grid container justify="center" spacing={2}>
         <Grid item>
           <CircularStatic value={5} max={5} color={"orange"} label={"TOTAL"} />
         </Grid>

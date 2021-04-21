@@ -15,7 +15,6 @@ import React from "react";
 import { useSpring, animated } from "react-spring";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import { useMediaQuery } from "react-responsive";
 import ScrollMenu from "react-horizontal-scrolling-menu";
 
 // state
@@ -55,16 +54,25 @@ export default function Mobile() {
     setItems(Menu(list, "item1"));
   }, []);
 
+  React.useEffect(() => {
+    try {
+      var goFS = document.getElementById("goFS");
+      goFS.addEventListener(
+        "click",
+        function () {
+          document.body.requestFullscreen();
+        },
+        false
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
   const childrenSideBySideStyle = {
     display: "flex",
     flexDirection: "row",
   };
-
-  const isBigScreen = useMediaQuery({ minWidth: 1824 });
-  const isDesktopOrLaptop = useMediaQuery({ minWidth: 991, maxWidth: 1824 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 });
-  const isMobile = useMediaQuery({ maxWidth: 768 });
-  const isPortrait = useMediaQuery({ orientation: "portrait" });
 
   const list = [
     { name: "READINESS" },
@@ -79,19 +87,21 @@ export default function Mobile() {
   };
 
   const handleFullScreen = () => {
-    try {
-      var goFS = document.getElementById("goFS");
-      goFS.addEventListener(
-        "click",
-        function () {
-          document.body.requestFullscreen();
-        },
-        false
-      );
-    } catch (error) {
-      console.log(error);
-    }
+    document.body.requestFullscreen();
   };
+
+  // const handleFullScreen = () => {
+  //   let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  //   let elem = isSafari ? document.documentElement : document.body;
+  //   let openFn =
+  //     elem.requestFullscreen ||
+  //     elem.mozRequestFullScreen ||
+  //     elem.webkitRequestFullscreen ||
+  //     elem.msRequestFullscreen;
+  //   if (openFn) {
+  //     openFn.call(elem);
+  //   }
+  // };
 
   const MenuItem = ({ text, selected }) => {
     return (
@@ -122,8 +132,8 @@ export default function Mobile() {
   const Arrow = ({ text }) => {
     return <div style={{ color: "orange" }}>{text}</div>;
   };
-  const ArrowLeft = Arrow({ text: "<" });
-  const ArrowRight = Arrow({ text: ">" });
+  const ArrowLeft = Arrow({ text: "" });
+  const ArrowRight = Arrow({ text: "" });
 
   return (
     <animated.div style={animLayout}>
@@ -137,9 +147,9 @@ export default function Mobile() {
           }}
         >
           <span
-            id="goFS"
-            onClick={handleFullScreen()}
-            style={{ display: isMobile ? "block" : "none" }}
+            // id="goFS"
+            onClick={() => handleFullScreen()}
+            style={{ display: "block" }}
           >
             <span style={{ color: "white" }}>NC2+</span> MOBILE
           </span>

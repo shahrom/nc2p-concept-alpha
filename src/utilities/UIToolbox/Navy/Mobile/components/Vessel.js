@@ -48,7 +48,7 @@ export default function VesselStatus(props) {
 
   return (
     <div style={{ padding: 30 }}>
-      <Grid container justify="center" spacing={5}>
+      <Grid container justify="center" spacing={2}>
         <Grid item>
           <CircularStatic
             value={82}

@@ -18,7 +18,7 @@ export default function Slide2(props) {
   return (
     <div
       style={{
-        backgroundColor: "rgba(17,21,30,0.7)",
+        backgroundColor: "rgba(17,21,30,0.2)",
         height: 700,
       }}
     >

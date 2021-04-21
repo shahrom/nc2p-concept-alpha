@@ -14,6 +14,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 // components
 import Menu1 from "./Menu1";
@@ -30,23 +31,33 @@ export default function Crisis() {
     setSliderIndex(index);
   };
 
+  const isPortrait = useMediaQuery("(orientation: portrait)");
+
   return (
-    <Container maxWidth="sm">
+    <div
+      style={{
+        overflowY: "auto",
+        height: isPortrait ? window.innerHeight : window.innerHeight / 1.3,
+      }}
+    >
       <br />
-      <Grid container justify="center" spacing={5}>
-        <Grid item md={3} xs={6}>
-          <Menu1 handleMoreInfo={handleMoreInfo} />
+      <Container maxWidth="sm">
+        <br />
+        <Grid container justify="center" spacing={5}>
+          <Grid item md={3} xs={6}>
+            <Menu1 handleMoreInfo={handleMoreInfo} />
+          </Grid>
+          <Grid item md={3} xs={6}>
+            <Menu2 handleMoreInfo={handleMoreInfo} />
+          </Grid>
+          <Grid item md={3} xs={6}>
+            <Menu3 handleMoreInfo={handleMoreInfo} />
+          </Grid>
+          <Grid item md={3} xs={6}>
+            <Menu4 handleMoreInfo={handleMoreInfo} />
+          </Grid>
         </Grid>
-        <Grid item md={3} xs={6}>
-          <Menu2 handleMoreInfo={handleMoreInfo} />
-        </Grid>
-        <Grid item md={3} xs={6}>
-          <Menu3 handleMoreInfo={handleMoreInfo} />
-        </Grid>
-        <Grid item md={3} xs={6}>
-          <Menu4 handleMoreInfo={handleMoreInfo} />
-        </Grid>
-      </Grid>
-    </Container>
+      </Container>
+    </div>
   );
 }

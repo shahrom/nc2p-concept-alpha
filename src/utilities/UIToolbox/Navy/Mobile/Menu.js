@@ -38,7 +38,7 @@ export default function Menu(props) {
         <span
           style={{
             fontFamily: "Barlow",
-            color: "blue",
+            color: "#0375ED",
             fontSize: 24,
             fontWeight: 500,
           }}
