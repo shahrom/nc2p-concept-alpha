@@ -16,7 +16,6 @@ import React from "react";
 // component
 import ACCBarChart from "./ACCBarChart";
 import CircularStatic from "./CircularStatic";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function VesselStatus(props) {
   const childrenSideBySideStyle = {
@@ -24,11 +23,10 @@ export default function VesselStatus(props) {
     flexDirection: "row",
   };
 
-  const isMobile = useMediaQuery("(max-width:768px)");
   return (
-    <div style={{ marginLeft: isMobile ? 0 : 150 }}>
+    <div style={{ marginLeft: 100 }}>
       <div style={childrenSideBySideStyle}>
-        <div style={{ width: isMobile ? 10 : 110 }} />
+        <div style={{ width: 110 }} />
         <CircularStatic value={5} max={5} color={"orange"} label={"TOTAL RADAR"} />
         <div style={{ width: 20 }} />
         <CircularStatic value={1} max={5} color={"#1BA716"} label={"TOTAL SERVICEABLE"} />
@@ -53,23 +51,6 @@ export default function VesselStatus(props) {
 
       <div>
         <ACCBarChart />
-        <br />
-        <br />
-        <div
-          style={{
-            position: "relative",
-            marginLeft: 360,
-            marginTop: -380,
-            opacity: 0.1,
-          }}
-        >
-          <img
-            src={"img/content/complaints/radar.png"}
-            width="120px"
-            height="auto"
-            object-fit="contain"
-          />
-        </div>
       </div>
       <br />
     </div>

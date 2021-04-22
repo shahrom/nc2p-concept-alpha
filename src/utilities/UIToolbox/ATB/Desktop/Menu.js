@@ -14,15 +14,13 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
 import Button from "@material-ui/core/Button";
-import Chip from "@material-ui/core/Chip";
 
 // icons
 import InfoIcon from "@material-ui/icons/Info";
-import EqualizerIcon from "@material-ui/icons/Equalizer";
-import AppsIcon from "@material-ui/icons/Apps";
 import SearchIcon from "@material-ui/icons/Search";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
-export default function CrisisManagement(props) {
+export default function Menu(props) {
   // 1
   const [open, setOpen] = React.useState(true);
 
@@ -41,10 +39,21 @@ export default function CrisisManagement(props) {
   return (
     <animated.div style={animLayout}>
       <div>
-        <p style={{ color: "gray", fontSize: 14 }}>
-          <span style={{ color: "gray", fontSize: 14 }}>JOINTFORCE</span>
-          /READINESS
-        </p>
+        <br />
+        <Button
+          onClick={() => window.ViewStateManager.SetContent("READINESS")}
+          style={{
+            outline: "none",
+            color: "gray",
+            borderColor: "",
+          }}
+          variant="outlined"
+          startIcon={<ArrowBackIcon />}
+        >
+          BACK
+        </Button>
+        <hr style={{ borderColor: "gray" }} />
+        <br />
 
         <span
           style={{

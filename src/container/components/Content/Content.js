@@ -26,7 +26,7 @@ import Monitoring from "./components/Monitoring/Monitoring";
 export default function Content() {
   // 1
   const [open, setOpen] = React.useState(true);
-  const [content, setContent] = React.useState("STATUS");
+  const [content, setContent] = React.useState("READINESS");
 
   // 2
   const viewState = new ViewState();
@@ -35,7 +35,7 @@ export default function Content() {
 
   var selectedDisplay;
   switch (content) {
-    case "STATUS":
+    case "READINESS":
       selectedDisplay = <Readiness />;
       break;
     case "NAVY":

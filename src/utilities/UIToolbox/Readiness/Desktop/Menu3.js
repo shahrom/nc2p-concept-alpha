@@ -65,7 +65,7 @@ export default function Menu3(props) {
         <br />
         <Button
           onClick={() => {
-            window.ViewStateManager.SetContent("COMPLAINTS");
+            window.ViewStateManager.SetContent("AIRFORCE");
           }}
           style={{
             outline: "none",

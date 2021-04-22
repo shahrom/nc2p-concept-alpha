@@ -10,7 +10,7 @@ export function ChartPie1() {
   ]);
 
   return (
-    <div style={{ marginLeft: 170 }}>
+    <div style={{ marginLeft: 120 }}>
       <PieChart
         height={200}
         width={350}

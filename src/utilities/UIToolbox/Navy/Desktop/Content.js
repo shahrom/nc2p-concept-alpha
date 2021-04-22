@@ -17,12 +17,14 @@ import Container from "@material-ui/core/Container";
 
 // components
 import Slide1 from "./components/Slide1";
+import Slide2 from "./components/Slide2";
 
 export default function Content(props) {
   return (
     <Container maxWidth="md">
       <SwipeableViews index={props.sliderIndex - 1}>
         <Slide1 />
+        <Slide2 />
       </SwipeableViews>
     </Container>
   );

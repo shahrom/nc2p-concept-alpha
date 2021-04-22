@@ -16,7 +16,6 @@ import React from "react";
 // component
 import Vessel from "./Vessel";
 import CircularStatic from "./CircularStatic";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function VesselStatus(props) {
   const childrenSideBySideStyle = {
@@ -24,10 +23,8 @@ export default function VesselStatus(props) {
     flexDirection: "row",
   };
 
-  const isMobile = useMediaQuery("(max-width:768px)");
-
   return (
-    <div style={{ marginLeft: isMobile ? -30 : 80 }}>
+    <div style={{ marginLeft: 50 }}>
       <div style={childrenSideBySideStyle}>
         <div style={{ width: 110 }} />
         <CircularStatic value={70.8} max={100} color={"cyan"} label={"ROVER"} />

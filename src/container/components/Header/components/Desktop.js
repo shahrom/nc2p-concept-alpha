@@ -149,7 +149,7 @@ export default function Desktop() {
               label={
                 <p style={{ marginTop: 5, fontSize: 16, color: "cyan" }}>READINESS</p>
               }
-              value={"STATUS"}
+              value={"READINESS"}
             />
             <Tab
               style={{ minWidth: 150, outline: "none" }}
@@ -158,21 +158,21 @@ export default function Desktop() {
                   INTELLIGENCE
                 </p>
               }
-              value={"STATUS"}
+              value={"INTELLIGENCE"}
             />
             <Tab
               style={{ minWidth: 150, outline: "none" }}
               label={
                 <p style={{ marginTop: 5, fontSize: 16, color: "lime" }}>PLANNING</p>
               }
-              value={"STATUS"}
+              value={"PLANNING"}
             />
             <Tab
               style={{ minWidth: 150, outline: "none" }}
               label={
                 <p style={{ marginTop: 5, fontSize: 16, color: "yellow" }}>COMMAND</p>
               }
-              value={"MONITORING"}
+              value={"COMMAND"}
             />
           </Tabs>
         </div>

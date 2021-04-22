@@ -20,6 +20,7 @@ import InfoIcon from "@material-ui/icons/Info";
 import EqualizerIcon from "@material-ui/icons/Equalizer";
 import AppsIcon from "@material-ui/icons/Apps";
 import SearchIcon from "@material-ui/icons/Search";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 export default function CrisisManagement(props) {
   // 1
@@ -40,11 +41,22 @@ export default function CrisisManagement(props) {
   return (
     <animated.div style={animLayout}>
       <div>
-        <p style={{ color: "gray", fontSize: 14 }}>
-          <span style={{ color: "gray", fontSize: 14 }}>ARMY</span>/READINESS
-        </p>
+        <br />
+        <Button
+          onClick={() => window.ViewStateManager.SetContent("READINESS")}
+          style={{
+            outline: "none",
+            color: "gray",
+            borderColor: "",
+          }}
+          variant="outlined"
+          startIcon={<ArrowBackIcon />}
+        >
+          BACK
+        </Button>
+        <hr style={{ borderColor: "gray" }} />
+        <br />
 
-        {/* // Title */}
         <span
           style={{
             fontFamily: "Barlow",

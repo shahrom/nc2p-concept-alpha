@@ -18,7 +18,7 @@ export default function Slide1(props) {
   return (
     <div
       style={{
-        backgroundColor: "rgba(17,21,30,0.2)",
+        backgroundColor: "rgba(17,21,30,0.5)",
       }}
     >
       <div>

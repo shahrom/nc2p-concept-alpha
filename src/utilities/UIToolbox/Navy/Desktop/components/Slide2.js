@@ -12,13 +12,13 @@
  */
 
 import React from "react";
-import ACCBarChart from "./components/ACCBarChart";
+import ACCBarChart from "./ACCBarChart";
 
 export default function Slide2(props) {
   return (
     <div
       style={{
-        backgroundColor: "rgba(17,21,30,0.2)",
+        backgroundColor: "rgba(17,21,30,0.5)",
       }}
     >
       <div>

@@ -49,13 +49,19 @@ export default class ViewStateManager {
   };
 
   SetContent(type) {
-    this.contentState.SetContent(type);
+    switch (type) {
+      case "READINESS":
+      case "INTELLIGENCE":
+      case "PLANNING":
+        this.contentState.SetContent("READINESS");
+        break;
+      default:
+        this.contentState.SetContent(type);
+        break;
+    }
+
     this.footerState.Display(true);
-    if (type === "STATUS-INFO") this.footerState.Display(false);
-    if (type === "CRISIS-INFO") this.footerState.Display(false);
-    if (type === "CRIME-INFO") this.footerState.Display(false);
-    if (type === "COMPLAINTS-INFO") this.footerState.Display(false);
-    if (type === "MONITORING") this.footerState.Display(false);
+    if (type === "COMMAND") this.footerState.Display(false);
   }
 
   DisplayArmyDetail(id) {

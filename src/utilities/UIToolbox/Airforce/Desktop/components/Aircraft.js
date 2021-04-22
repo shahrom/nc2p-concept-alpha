@@ -16,7 +16,6 @@ import React from "react";
 // component
 import BarChart from "./BarChart";
 import CircularStatic from "./CircularStatic";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function VesselStatus(props) {
   const childrenSideBySideStyle = {
@@ -24,21 +23,19 @@ export default function VesselStatus(props) {
     flexDirection: "row",
   };
 
-  const isMobile = useMediaQuery("(max-width:768px)");
-
   return (
-    <div style={{ marginLeft: isMobile ? -90 : 50 }}>
+    <div style={{ marginLeft: 50 }}>
       <div style={childrenSideBySideStyle}>
-        <div style={{ width: isMobile ? 100 : 180 }} />
+        <div style={{ width: 100 }} />
         <CircularStatic value={165} max={300} color={"orange"} label={"TOTAL 1ST LINE"} />
-        <div style={{ width: 20 }} />
+        <div style={{ width: 70 }} />
         <CircularStatic
           value={98}
           max={300}
           color={"#1BA716"}
           label={"TOTAL SERVICEABLE"}
         />
-        <div style={{ width: 20 }} />
+        <div style={{ width: 70 }} />
         <CircularStatic value={59.4} max={100} color={"red"} label={"% TOTAL 1ST LINE"} />
       </div>
 

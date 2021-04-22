@@ -16,7 +16,6 @@ import React from "react";
 // component
 import { ChartPie1 } from "./ChartPie";
 import CircularStatic from "./CircularStatic";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function VesselStatus(props) {
   const MyListItem = (props) => (
@@ -47,27 +46,15 @@ export default function VesselStatus(props) {
     flexDirection: "row",
   };
 
-  const isMobile = useMediaQuery("(max-width:768px)");
-
   return (
-    <div style={{ marginLeft: isMobile ? -100 : 120 }}>
+    <div style={{ marginLeft: 150 }}>
       <div style={childrenSideBySideStyle}>
         <div style={{ width: 110 }} />
         <CircularStatic value={82} max={100} color={"cyan"} label={"ARMADA"} />
         <div style={{ width: 50 }} />
-        <CircularStatic
-          value={80}
-          max={100}
-          color={"cyan"}
-          label={"MAWILLA 1"}
-        />
+        <CircularStatic value={80} max={100} color={"cyan"} label={"MAWILLA 1"} />
         <div style={{ width: 50 }} />
-        <CircularStatic
-          value={78}
-          max={100}
-          color={"cyan"}
-          label={"MAWILLA 2"}
-        />
+        <CircularStatic value={78} max={100} color={"cyan"} label={"MAWILLA 2"} />
       </div>
 
       <hr
@@ -82,7 +69,7 @@ export default function VesselStatus(props) {
         style={{
           color: "white",
           textAlign: "center",
-          marginLeft: isMobile ? 100 : -100,
+          marginLeft: -130,
         }}
       >
         TOTAL VESSEL READINESS
@@ -90,23 +77,8 @@ export default function VesselStatus(props) {
       <br />
       <div>
         <ChartPie1 />
-        <div
-          style={{
-            position: "relative",
-            marginLeft: 50,
-            marginTop: -380,
-            opacity: 0.1,
-          }}
-        >
-          <img
-            src={"img/icons/vessel_white.png"}
-            width="550px"
-            height="auto"
-            object-fit="contain"
-          />
-        </div>
       </div>
-      <div style={{ marginLeft: 100, marginTop: 200 }}>
+      <div style={{ marginLeft: 60 }}>
         <div style={childrenSideBySideStyle}>
           <MyListItem
             label={"PATROL"}
