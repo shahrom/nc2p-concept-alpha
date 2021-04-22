@@ -29,8 +29,8 @@ export default function InspectionBarChart(props) {
       },
       {
         name: "1206",
-        patrol: 95,
-        inspection: 5,
+        patrol: 100,
+        inspection: 0,
       },
     ];
 

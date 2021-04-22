@@ -31,12 +31,7 @@ export default function Menu1(props) {
         }}
         style={{ textAlign: "center" }}
       >
-        <img
-          src={"img/logo/td.png"}
-          width={"100px"}
-          height="auto"
-          object-fit="contain"
-        />
+        <img src={"img/logo/td.png"} width={"100px"} height="auto" object-fit="contain" />
         <br />
         <span
           style={{

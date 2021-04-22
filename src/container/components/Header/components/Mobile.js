@@ -83,7 +83,7 @@ export default function Mobile() {
 
   const handleSelect = (key) => {
     setSelected(key);
-    window.ViewStateManager.SetContent("STATUS");
+    window.ViewStateManager.SetContent("READINESS");
   };
 
   const handleFullScreen = () => {

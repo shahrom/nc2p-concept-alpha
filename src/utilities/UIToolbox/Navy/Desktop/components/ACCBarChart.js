@@ -17,7 +17,7 @@ import { BarChart, Bar, XAxis, YAxis } from "recharts";
 export default function InspectionBarChart(props) {
   const [data, setData] = React.useState([]);
 
-  const COLORS = ["#00c0ff", "#1ba716", "#FF8042", "#ff0000", "#7c26cb"];
+  const COLORS = ["#00c0ff", "#1ba716", "#FFA500", "#ff0000", "#7c26cb"];
 
   React.useEffect(() => {
     var data = [
@@ -50,11 +50,17 @@ export default function InspectionBarChart(props) {
     }, 200);
   }, [props.index]);
 
+  const childrenSideBySideStyle = {
+    display: "flex",
+    flexDirection: "row",
+    margin: 5,
+  };
+
   return (
     <div>
       <BarChart
         width={800}
-        height={550}
+        height={450}
         data={data}
         margin={{ top: 55, right: 0, left: 60, bottom: 50 }}
       >
@@ -76,6 +82,25 @@ export default function InspectionBarChart(props) {
         <Bar dataKey="arrest" fill={COLORS[3]} />
         <Bar dataKey="tag" fill={COLORS[2]} />
       </BarChart>
+
+      <div style={{ padding: 30 }}>
+        <div style={childrenSideBySideStyle}>
+          <div style={{ width: 20, height: 20, backgroundColor: "#00C0FF" }} />
+          <span style={{ color: "white", marginLeft: 10 }}>Patrol</span>
+        </div>
+        <div style={childrenSideBySideStyle}>
+          <div style={{ width: 20, height: 20, backgroundColor: "green" }} />
+          <span style={{ color: "white", marginLeft: 10 }}>Support</span>
+        </div>
+        <div style={childrenSideBySideStyle}>
+          <div style={{ width: 20, height: 20, backgroundColor: "#FF0000" }} />
+          <span style={{ color: "white", marginLeft: 10 }}>Strike</span>
+        </div>
+        <div style={childrenSideBySideStyle}>
+          <div style={{ width: 20, height: 20, backgroundColor: "#FFA500" }} />
+          <span style={{ color: "white", marginLeft: 10 }}>Training</span>
+        </div>
+      </div>
     </div>
   );
 }

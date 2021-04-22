@@ -12,11 +12,12 @@
  */
 
 import React from "react";
-import Enforcement from "./Enforcement";
+import Readiness from "./Readiness";
 
 export default function Slide1(props) {
   return (
     <div
+      id="Army.Slider1"
       style={{
         backgroundColor: "rgba(17,21,30,0.5)",
         height: 700,
@@ -34,7 +35,7 @@ export default function Slide1(props) {
         >
           SUMMARY - 19 RAMD
         </p>
-        <Enforcement />
+        <Readiness />
       </div>
     </div>
   );

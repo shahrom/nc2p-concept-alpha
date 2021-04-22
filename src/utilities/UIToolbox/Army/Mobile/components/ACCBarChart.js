@@ -17,6 +17,7 @@ import Container from "@material-ui/core/Container";
 
 export default function InspectionBarChart(props) {
   const [data, setData] = React.useState([]);
+  const [width, setWidth] = React.useState(0);
 
   const COLORS = ["#00c0ff", "#1ba716", "#FF8042", "#ff0000", "#7c26cb"];
 
@@ -66,11 +67,20 @@ export default function InspectionBarChart(props) {
     }, 200);
   }, [props.index]);
 
+  React.useEffect(() => {
+    var ele = document.getElementById("Army.Slider1"), // Do not use #
+      eleStyle = window.getComputedStyle(ele);
+    var eleWidth = eleStyle.width;
+    var width = eleWidth.replace("px", "");
+
+    setWidth(parseInt(width));
+  });
+
   return (
     <div>
       <p style={{ textAlign: "center", color: "gray" }}>Elements</p>
       <BarChart
-        width={window.innerWidth - 100}
+        width={width - 30}
         height={150}
         data={data}
         margin={{ top: 0, right: 0, left: -60, bottom: 0 }}

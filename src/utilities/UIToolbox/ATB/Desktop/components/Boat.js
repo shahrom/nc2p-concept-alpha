@@ -27,13 +27,37 @@ export default function VesselStatus(props) {
     <div style={{ marginLeft: 50 }}>
       <div style={childrenSideBySideStyle}>
         <div style={{ width: 110 }} />
-        <CircularStatic value={70.8} max={100} color={"cyan"} label={"ROVER"} />
+        <CircularStatic
+          value={70.8}
+          max={100}
+          color={"cyan"}
+          label={"ROVER"}
+          percentage={true}
+        />
         <div style={{ width: 50 }} />
-        <CircularStatic value={77.8} max={100} color={"cyan"} label={"BARACUDA"} />
+        <CircularStatic
+          value={77.8}
+          max={100}
+          color={"cyan"}
+          label={"BARACUDA"}
+          percentage={true}
+        />
         <div style={{ width: 50 }} />
-        <CircularStatic value={59.4} max={100} color={"cyan"} label={"RHIB"} />
+        <CircularStatic
+          value={59.4}
+          max={100}
+          color={"cyan"}
+          label={"RHIB"}
+          percentage={true}
+        />
         <div style={{ width: 50 }} />
-        <CircularStatic value={50.2} max={100} color={"cyan"} label={"VIPER"} />
+        <CircularStatic
+          value={50.2}
+          max={100}
+          color={"cyan"}
+          label={"VIPER"}
+          percentage={true}
+        />
       </div>
 
       <div>

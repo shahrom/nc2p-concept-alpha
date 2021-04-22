@@ -17,6 +17,7 @@ import Summary from "./Summary";
 export default function Slide1(props) {
   return (
     <div
+      id="Army.Slider1"
       style={{
         backgroundColor: "rgba(17,21,30,0.5)",
       }}

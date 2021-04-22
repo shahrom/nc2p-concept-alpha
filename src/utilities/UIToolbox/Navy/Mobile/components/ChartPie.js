@@ -26,9 +26,9 @@ export function ChartPie1() {
         displayAllLabels={false}
         series={
           <PieArcSeries
-            cornerRadius={54}
-            padAngle={0.02}
-            padRadius={5}
+            cornerRadius={204}
+            padAngle={0.52}
+            padRadius={15}
             doughnut={true}
             colorScheme={["#0088FE", "#1BA716", "orange", "red"]}
           />

@@ -31,7 +31,10 @@ function CircularProgressWithLabel(props) {
             width: 80,
           }}
         >
-          {props.value}
+          <span>{props.value}</span>
+          <span style={{ fontSize: 14, display: props.percentage ? "block" : "none" }}>
+            %
+          </span>
         </p>
       </Box>
       <p style={{ color: "white" }}>{props.label}</p>
@@ -47,6 +50,7 @@ export default function CircularStatic(props) {
       color={props.color}
       label={props.label}
       max={props.max}
+      percentage={props.percentage}
     />
   );
 }

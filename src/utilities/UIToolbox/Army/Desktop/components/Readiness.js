@@ -12,47 +12,46 @@
  */
 
 import React from "react";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import Grid from "@material-ui/core/Grid";
 
 // component
 import ACCBarChart from "./ACCBarChart";
 import CircularStatic from "./CircularStatic";
 
-export default function VesselStatus(props) {
+export default function Readiness(props) {
   const childrenSideBySideStyle = {
     display: "flex",
     flexDirection: "row",
   };
 
-  const isMobile = useMediaQuery("(max-width:768px)");
-
   return (
-    <div style={{ marginLeft: isMobile ? 0 : 80 }}>
-      <div>
-        <div style={childrenSideBySideStyle}>
-          <div style={{ width: isMobile ? 0 : 40 }} />
+    <div>
+      <Grid container justify="center" spacing={5}>
+        <Grid item>
           <CircularStatic
             value={79.1}
             max={100}
             color={"orange"}
-            label={"AVERAGE CAPABILITY"}
+            label={"CAPABILITY %"}
           />
-          <div style={{ width: 50 }} />
+        </Grid>
+        <Grid item>
           <CircularStatic
             value={88.9}
             max={100}
             color={"#1BA716"}
-            label={"AVERAGE READINESS"}
+            label={"READINESS %"}
           />
-          <div style={{ width: 50 }} />
+        </Grid>
+        <Grid item>
           <CircularStatic
             value={72.7}
             max={100}
             color={"orange"}
-            label={"AVERAGE SERVICEABILITY"}
+            label={"SERVICEABILITY %"}
           />
-        </div>
-      </div>
+        </Grid>
+      </Grid>
 
       <hr
         style={{
@@ -64,26 +63,7 @@ export default function VesselStatus(props) {
       />
 
       <p style={{ color: "white", textAlign: "center", marginLeft: 0 }}>ELEMENTS</p>
-      <div>
-        <ACCBarChart />
-        <br />
-        <br />
-        <div
-          style={{
-            position: "relative",
-            marginLeft: 260,
-            marginTop: -380,
-            opacity: 0.1,
-          }}
-        >
-          <img
-            src={"img/content/status/enforcement.png"}
-            width="120px"
-            height="auto"
-            object-fit="contain"
-          />
-        </div>
-      </div>
+      <ACCBarChart />
       <br />
     </div>
   );
