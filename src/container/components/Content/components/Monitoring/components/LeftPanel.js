@@ -24,7 +24,7 @@ export default function LeftPanel(props) {
         width: 250,
         height: window.innerHeight,
         backdropFilter: "blur(5px)",
-        backgroundColor: "rgba(0, 0, 0, 0.6)",
+        backgroundColor: "rgba(0, 0, 0, 0.8)",
       }}
     >
       <Content />

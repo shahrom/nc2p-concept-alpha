@@ -19,17 +19,12 @@ import ACCBarChart from "./ACCBarChart";
 import CircularStatic from "./CircularStatic";
 
 export default function Readiness(props) {
-  const childrenSideBySideStyle = {
-    display: "flex",
-    flexDirection: "row",
-  };
-
   return (
     <div>
       <Grid container justify="center" spacing={5}>
         <Grid item>
           <CircularStatic
-            value={79.1}
+            value={(79.1 - props.updateData).toFixed(1)}
             max={100}
             color={"orange"}
             label={"CAPABILITY %"}
@@ -37,7 +32,7 @@ export default function Readiness(props) {
         </Grid>
         <Grid item>
           <CircularStatic
-            value={88.9}
+            value={(88.9 - props.updateData).toFixed(1)}
             max={100}
             color={"#1BA716"}
             label={"READINESS %"}
@@ -45,7 +40,7 @@ export default function Readiness(props) {
         </Grid>
         <Grid item>
           <CircularStatic
-            value={72.7}
+            value={(72.7 - props.updateData).toFixed(1)}
             max={100}
             color={"orange"}
             label={"SERVICEABILITY %"}
@@ -63,7 +58,7 @@ export default function Readiness(props) {
       />
 
       <p style={{ color: "white", textAlign: "center", marginLeft: 0 }}>ELEMENTS</p>
-      <ACCBarChart />
+      <ACCBarChart updateData={props.updateData} />
       <br />
     </div>
   );

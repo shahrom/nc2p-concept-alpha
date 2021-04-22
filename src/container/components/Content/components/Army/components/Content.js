@@ -26,9 +26,15 @@ export default function Content(props) {
   return (
     <Container maxWidth="md">
       {isMobile ? (
-        <MobileContent handleSlideIndex={props.handleSlideIndex} />
+        <MobileContent
+          updateData={props.updateData}
+          handleSlideIndex={props.handleSlideIndex}
+        />
       ) : (
-        <DesktopContent handleSlideIndex={props.handleSlideIndex} />
+        <DesktopContent
+          updateData={props.updateData}
+          handleSlideIndex={props.handleSlideIndex}
+        />
       )}
     </Container>
   );

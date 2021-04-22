@@ -25,9 +25,9 @@ export default class ViewStateManager {
     if (!instance) {
       // Register all the ViewState that needs to be accessed globaly
       this.contentState = new ContentState();
-      this.dashboardState = new ReadinessState();
+      this.readinesState = new ReadinessState();
       this.navyState = new NavyState();
-      this.crisisState = new ArmyState();
+      this.armyState = new ArmyState();
       this.footerState = new FooterState();
 
       window.MessageDispatcher.SubscribeDispatcher(
@@ -64,31 +64,7 @@ export default class ViewStateManager {
     if (type === "COMMAND") this.footerState.Display(false);
   }
 
-  DisplayArmyDetail(id) {
-    this.crisisDetail.SetOpen(id);
-  }
-
-  DisplayZoneDetail(id) {
-    this.navyDetail.SetOpen(id);
-  }
-
-  DisplayIVSSDetail(id) {
-    this.ivssDetail.SetOpen(id);
-  }
-
-  DisplayITMSDetail(id) {
-    this.itmsDetail.SetOpen(id);
-  }
-
-  DisplayIPDRSDetail(id) {
-    this.ipdrsDetail.SetOpen(id);
-  }
-
-  DisplayIERSDetail(id) {
-    this.iersDetail.SetOpen(id);
-  }
-
-  DisplayICMSDetail(id) {
-    this.icmsDetail.SetOpen(id);
+  UpdateDisplayData() {
+    this.armyState.UpdateData();
   }
 }

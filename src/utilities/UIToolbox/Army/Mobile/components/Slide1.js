@@ -15,8 +15,12 @@ import React from "react";
 import Summary from "./Summary";
 
 export default function Slide1(props) {
+  const handleUpdateData = () => {
+    window.ViewStateManager.UpdateDisplayData();
+  };
   return (
     <div
+      onClick={() => handleUpdateData()}
       id="Army.Slider1"
       style={{
         backgroundColor: "rgba(17,21,30,0.5)",
@@ -34,7 +38,7 @@ export default function Slide1(props) {
         >
           SUMMARY
         </p>
-        <Summary />
+        <Summary updateData={props.updateData} />
       </div>
     </div>
   );

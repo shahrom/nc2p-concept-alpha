@@ -25,7 +25,7 @@ export default function InspectionBarChart(props) {
     var data = [
       {
         name: "HR",
-        patrol: 100,
+        patrol: 100 - props.updateData,
         inspection: 100,
         arrest: 12,
       },
@@ -66,6 +66,52 @@ export default function InspectionBarChart(props) {
       setData(data);
     }, 200);
   }, [props.index]);
+
+  React.useEffect(() => {
+    var data = [
+      {
+        name: "HR",
+        patrol: 100 - props.updateData,
+        inspection: 100,
+        arrest: 12,
+      },
+      {
+        name: "COM",
+        patrol: 35,
+        inspection: 100 - props.updateData,
+        arrest: 37,
+      },
+      {
+        name: "MOB ",
+        patrol: 41,
+        inspection: 100 - props.updateData,
+        arrest: 23,
+      },
+      {
+        name: "LGS",
+        patrol: 92,
+        inspection: 100 - props.updateData,
+        arrest: 88,
+      },
+      {
+        name: "FPR",
+        patrol: 92,
+        inspection: 87,
+        arrest: 81,
+      },
+      {
+        name: "TRN ",
+        patrol: 41,
+        inspection: 100 - props.updateData,
+        arrest: 85,
+      },
+    ];
+
+    setData([]);
+    setTimeout(function () {
+      setData(data);
+    }, 200);
+  }, [props.updateData]);
 
   React.useEffect(() => {
     var ele = document.getElementById("Army.Slider1"), // Do not use #

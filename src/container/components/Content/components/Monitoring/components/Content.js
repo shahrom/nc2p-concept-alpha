@@ -24,7 +24,21 @@ export default function Content(props) {
         width: window.innerWidth,
       }}
     >
-      <Map />
+      {/* <Map /> */}
+      <iframe
+        style={{
+          position: "absolute",
+          top: "120px",
+          left: "0px",
+          margin: "auto",
+        }}
+        is="x-frame-bypass"
+        src={"http://115.133.238.21:97/react-arcgis/"}
+        frameborder="0"
+        width="100%"
+        height={window.innerHeight - 100}
+        scrolling="no"
+      ></iframe>
     </div>
   );
 }

@@ -23,7 +23,7 @@ export default function Content(props) {
   return (
     <Container maxWidth="md">
       <SwipeableViews index={props.sliderIndex - 1}>
-        <Slide1 />
+        <Slide1 updateData={props.updateData} />
         <Slide2 />
       </SwipeableViews>
     </Container>

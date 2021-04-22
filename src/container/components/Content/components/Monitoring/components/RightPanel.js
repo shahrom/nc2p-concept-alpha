@@ -25,7 +25,7 @@ export default function RightPanel(props) {
         height: window.innerHeight,
         marginLeft: window.innerWidth - 250,
         backdropFilter: "blur(5px)",
-        backgroundColor: "rgba(0, 0, 0, 0.6)",
+        backgroundColor: "rgba(0, 0, 0, 0.8)",
       }}
     >
       <Content />

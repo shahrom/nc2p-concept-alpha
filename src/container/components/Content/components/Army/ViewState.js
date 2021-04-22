@@ -11,6 +11,7 @@
  * --------------------------------------------------------------------
  */
 
+import { LeakRemoveTwoTone } from "@material-ui/icons";
 import { createContext } from "react";
 export const StateBinder = createContext(null);
 
@@ -36,6 +37,10 @@ export default class ViewState {
     this.setDisplay = state;
   }
 
+  set bindUpdateData(state) {
+    this.setUpdateData = state;
+  }
+
   // 3. Public Functions
   Hide() {
     this.setDisplay = "none";
@@ -43,5 +48,10 @@ export default class ViewState {
 
   Display() {
     this.setDisplay = "block";
+  }
+
+  UpdateData() {
+    var random = Math.floor(Math.random() * 30);
+    this.setUpdateData(random.toFixed(1));
   }
 }

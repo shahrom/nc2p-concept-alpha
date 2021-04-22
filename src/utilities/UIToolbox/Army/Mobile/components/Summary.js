@@ -23,14 +23,24 @@ export default function Summary(props) {
     <div style={{ padding: 30 }}>
       <Grid container justify="center" spacing={5}>
         <Grid item>
-          <CircularStatic value={79.1} max={100} color={"orange"} label={"CAPABILITY"} />
-        </Grid>
-        <Grid item>
-          <CircularStatic value={88.9} max={100} color={"#1BA716"} label={"READINESS"} />
+          <CircularStatic
+            value={(79.1 - props.updateData).toFixed(1)}
+            max={100}
+            color={"orange"}
+            label={"CAPABILITY"}
+          />
         </Grid>
         <Grid item>
           <CircularStatic
-            value={72.7}
+            value={(88.9 - props.updateData).toFixed(1)}
+            max={100}
+            color={"#1BA716"}
+            label={"READINESS"}
+          />
+        </Grid>
+        <Grid item>
+          <CircularStatic
+            value={(72.7 - props.updateData).toFixed(1)}
             max={100}
             color={"orange"}
             label={"SERVICEABILITY"}
@@ -46,7 +56,7 @@ export default function Summary(props) {
         }}
       />
 
-      <ACCBarChart />
+      <ACCBarChart updateData={props.updateData} />
       <br />
     </div>
   );

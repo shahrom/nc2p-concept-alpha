@@ -15,8 +15,12 @@ import React from "react";
 import Readiness from "./Readiness";
 
 export default function Slide1(props) {
+  const handleUpdateData = () => {
+    window.ViewStateManager.UpdateDisplayData();
+  };
   return (
     <div
+      onClick={() => handleUpdateData()}
       id="Army.Slider1"
       style={{
         backgroundColor: "rgba(17,21,30,0.5)",
@@ -35,7 +39,7 @@ export default function Slide1(props) {
         >
           SUMMARY - 19 RAMD
         </p>
-        <Readiness />
+        <Readiness updateData={props.updateData} />
       </div>
     </div>
   );
