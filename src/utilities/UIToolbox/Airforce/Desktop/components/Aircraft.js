@@ -24,9 +24,9 @@ export default function VesselStatus(props) {
   };
 
   return (
-    <div style={{ marginLeft: 50 }}>
+    <div>
       <div style={childrenSideBySideStyle}>
-        <div style={{ width: 100 }} />
+        <div style={{ width: 60 }} />
         <CircularStatic value={165} max={300} color={"orange"} label={"TOTAL 1ST LINE"} />
         <div style={{ width: 70 }} />
         <CircularStatic
@@ -48,28 +48,8 @@ export default function VesselStatus(props) {
         }}
       />
 
-      <p style={{ color: "white", textAlign: "center", marginLeft: 0 }}>Aircraft Type</p>
-      <div>
-        <BarChart />
-        <br />
-        <br />
-        <div
-          style={{
-            position: "relative",
-            marginLeft: 260,
-            marginTop: -380,
-            opacity: 0.1,
-          }}
-        >
-          <img
-            src={"img/content/status/enforcement.png"}
-            width="120px"
-            height="auto"
-            object-fit="contain"
-          />
-        </div>
-      </div>
-      <br />
+      <p style={{ color: "white", textAlign: "center" }}>Aircraft Type</p>
+      <BarChart />
     </div>
   );
 }

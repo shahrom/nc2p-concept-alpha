@@ -125,8 +125,8 @@ export default function InspectionBarChart(props) {
   return (
     <Grid container justify={"center"}>
       <BarChart
-        width={width}
-        height={window.innerHeight / 2.2}
+        width={800}
+        height={400}
         data={data}
         margin={{ top: 55, right: 20, left: 0, bottom: 50 }}
       >

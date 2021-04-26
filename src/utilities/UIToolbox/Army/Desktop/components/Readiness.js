@@ -57,7 +57,7 @@ export default function Readiness(props) {
         }}
       />
 
-      <p style={{ color: "white", textAlign: "center", marginLeft: 0 }}>ELEMENTS</p>
+      <p style={{ color: "white", textAlign: "center" }}>ELEMENTS</p>
       <ACCBarChart updateData={props.updateData} />
       <br />
     </div>

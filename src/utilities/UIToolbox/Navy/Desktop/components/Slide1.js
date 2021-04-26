@@ -13,6 +13,8 @@
 
 import React from "react";
 import Vessel from "./Vessel";
+import { FitToViewport } from "react-fit-to-viewport";
+import Grid from "@material-ui/core/Grid";
 
 export default function Slide1(props) {
   return (
@@ -34,7 +36,17 @@ export default function Slide1(props) {
         >
           FULL MISSION CAPABLE (CAT 1 & 2)
         </p>
-        <Vessel />
+        <Grid container justify={"center"}>
+          <FitToViewport
+            width={1600}
+            height={700}
+            minZoom={0.5}
+            maxZoom={1}
+            style={{ overflow: "hidden" }}
+          >
+            <Vessel />
+          </FitToViewport>
+        </Grid>
       </div>
     </div>
   );

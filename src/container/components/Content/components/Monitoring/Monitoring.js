@@ -34,19 +34,10 @@ export default function Crisis() {
   };
 
   return (
-    <div
-      style={{
-        height: window.innerHeight - 200,
-        width: window.innerWidth - 0,
-        marginTop: 10,
-        display: display,
-      }}
-    >
-      <div style={childrenSideBySideStyle}>
-        <Content />
-        <LeftPanel />
-        <RightPanel />
-      </div>
+    <div style={childrenSideBySideStyle}>
+      <Content />
+      <LeftPanel />
+      <RightPanel />
     </div>
   );
 }

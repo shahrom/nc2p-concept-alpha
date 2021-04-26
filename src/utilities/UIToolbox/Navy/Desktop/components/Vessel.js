@@ -12,6 +12,7 @@
  */
 
 import React from "react";
+import Grid from "@material-ui/core/Grid";
 
 // component
 import { ChartPie1 } from "./ChartPie";
@@ -47,38 +48,41 @@ export default function VesselStatus(props) {
   };
 
   return (
-    <div style={{ marginLeft: 150 }}>
-      <div style={childrenSideBySideStyle}>
-        <div style={{ width: 110 }} />
-        <CircularStatic value={82} max={100} color={"cyan"} label={"ARMADA"} />
-        <div style={{ width: 50 }} />
-        <CircularStatic value={80} max={100} color={"cyan"} label={"MAWILLA 1"} />
-        <div style={{ width: 50 }} />
-        <CircularStatic value={78} max={100} color={"cyan"} label={"MAWILLA 2"} />
-      </div>
+    <div>
+      <Grid container justify="center">
+        <div style={childrenSideBySideStyle}>
+          <CircularStatic value={82} max={100} color={"cyan"} label={"ARMADA"} />
+          <div style={{ width: 50 }} />
+          <CircularStatic value={80} max={100} color={"cyan"} label={"MAWILLA 1"} />
+          <div style={{ width: 50 }} />
+          <CircularStatic value={78} max={100} color={"cyan"} label={"MAWILLA 2"} />
+        </div>
+      </Grid>
 
       <hr
         style={{
           backgroundColor: "gray",
           margin: 30,
           opacity: 0.2,
-          marginLeft: -140,
         }}
       />
+
       <p
         style={{
           color: "white",
           textAlign: "center",
-          marginLeft: -130,
         }}
       >
         TOTAL VESSEL READINESS
       </p>
+
       <br />
-      <div>
+
+      <Grid container justify="center">
         <ChartPie1 />
-      </div>
-      <div style={{ marginLeft: 60 }}>
+      </Grid>
+
+      <Grid container justify="center">
         <div style={childrenSideBySideStyle}>
           <MyListItem
             label={"PATROL"}
@@ -101,8 +105,7 @@ export default function VesselStatus(props) {
             color={"red"}
           />
         </div>
-      </div>
-      <br />
+      </Grid>
     </div>
   );
 }

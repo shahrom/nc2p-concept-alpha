@@ -114,7 +114,7 @@ export default function InspectionBarChart(props) {
   }, [props.updateData]);
 
   React.useEffect(() => {
-    var ele = document.getElementById("Army.Slider1"), // Do not use #
+    var ele = document.getElementById("Army.Slider1"),
       eleStyle = window.getComputedStyle(ele);
     var eleWidth = eleStyle.width;
     var width = eleWidth.replace("px", "");

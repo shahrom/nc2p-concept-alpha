@@ -16,7 +16,6 @@ import React from "react";
 // component
 import { ChartPie1 } from "./ChartPie";
 import CircularStatic from "./CircularStatic";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function VesselStatus(props) {
   const MyListItem = (props) => (
@@ -47,42 +46,23 @@ export default function VesselStatus(props) {
     flexDirection: "row",
   };
 
-  const isMobile = useMediaQuery("(max-width:768px)");
-
   return (
-    <div style={{ marginLeft: 40 }}>
+    <div>
       <hr
         style={{
           backgroundColor: "gray",
           margin: 30,
           opacity: 0.2,
-          marginLeft: -140,
         }}
       />
-      <p style={{ color: "white", textAlign: "center", marginLeft: -80 }}>
-        TOTAL VESSEL READINESS
-      </p>
+      <p style={{ color: "white", textAlign: "center" }}>TOTAL VESSEL READINESS</p>
       <br />
-      <div>
+      <div style={{ marginLeft: 120 }}>
         <ChartPie1 />
-        <div
-          style={{
-            position: "relative",
-            marginLeft: 50,
-            marginTop: -380,
-            opacity: 0.1,
-          }}
-        >
-          <img
-            src={"img/icons/vessel_white.png"}
-            width="550px"
-            height="auto"
-            object-fit="contain"
-          />
-        </div>
       </div>
-      <div style={{ marginLeft: isMobile ? -20 : 100, marginTop: 200 }}>
+      <div>
         <div style={childrenSideBySideStyle}>
+          <div style={{ width: 60 }} />
           <MyListItem
             label={"PATROL"}
             content={<p style={{ fontSize: 32, color: "white" }}>45</p>}
@@ -105,7 +85,6 @@ export default function VesselStatus(props) {
           />
         </div>
       </div>
-      <br />
     </div>
   );
 }

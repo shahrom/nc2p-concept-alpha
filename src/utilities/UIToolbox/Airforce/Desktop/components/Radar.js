@@ -24,7 +24,7 @@ export default function VesselStatus(props) {
   };
 
   return (
-    <div style={{ marginLeft: 100 }}>
+    <div style={{ marginLeft: 60 }}>
       <div style={childrenSideBySideStyle}>
         <div style={{ width: 110 }} />
         <CircularStatic value={5} max={5} color={"orange"} label={"TOTAL RADAR"} />

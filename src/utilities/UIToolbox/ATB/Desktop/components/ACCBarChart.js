@@ -13,7 +13,6 @@
 
 import React from "react";
 import { BarChart, Bar, XAxis, YAxis } from "recharts";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function InspectionBarChart(props) {
   const [data, setData] = React.useState([]);
@@ -40,12 +39,10 @@ export default function InspectionBarChart(props) {
     }, 200);
   }, [props.index]);
 
-  const isMobile = useMediaQuery("(max-width:768px)");
-
   return (
-    <div style={{ marginLeft: isMobile ? 0 : -100 }}>
+    <div>
       <BarChart
-        width={isMobile ? 500 : 800}
+        width={800}
         height={300}
         data={data}
         margin={{ top: 0, right: 30, left: 0, bottom: 50 }}

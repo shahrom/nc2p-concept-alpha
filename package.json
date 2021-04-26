@@ -15,6 +15,7 @@
     "react": "^17.0.1",
     "react-audio-player": "^0.11.1",
     "react-dom": "^17.0.1",
+    "react-fit-to-viewport": "^0.1.1",
     "react-gif-player": "^0.4.2",
     "react-horizontal-scrolling-menu": "^0.7.10",
     "react-hot-loader": "^4.13.0",

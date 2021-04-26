@@ -16,6 +16,7 @@ import React from "react";
 // component
 import Vessel from "./Vessel";
 import CircularStatic from "./CircularStatic";
+import Grid from "@material-ui/core/Grid";
 
 export default function VesselStatus(props) {
   const childrenSideBySideStyle = {
@@ -24,63 +25,47 @@ export default function VesselStatus(props) {
   };
 
   return (
-    <div style={{ marginLeft: 50 }}>
-      <div style={childrenSideBySideStyle}>
-        <div style={{ width: 110 }} />
-        <CircularStatic
-          value={70.8}
-          max={100}
-          color={"cyan"}
-          label={"ROVER"}
-          percentage={true}
-        />
-        <div style={{ width: 50 }} />
-        <CircularStatic
-          value={77.8}
-          max={100}
-          color={"cyan"}
-          label={"BARACUDA"}
-          percentage={true}
-        />
-        <div style={{ width: 50 }} />
-        <CircularStatic
-          value={59.4}
-          max={100}
-          color={"cyan"}
-          label={"RHIB"}
-          percentage={true}
-        />
-        <div style={{ width: 50 }} />
-        <CircularStatic
-          value={50.2}
-          max={100}
-          color={"cyan"}
-          label={"VIPER"}
-          percentage={true}
-        />
-      </div>
-
-      <div>
-        <Vessel />
-        <br />
-        <br />
-        <div
-          style={{
-            position: "relative",
-            marginLeft: 260,
-            marginTop: -380,
-            opacity: 0.1,
-          }}
-        >
-          <img
-            src={"img/content/status/enforcement.png"}
-            width="120px"
-            height="auto"
-            object-fit="contain"
+    <div>
+      <Grid container justify={"center"}>
+        <div style={childrenSideBySideStyle}>
+          <div style={{ width: 40 }} />
+          <CircularStatic
+            value={70.8}
+            max={100}
+            color={"cyan"}
+            label={"ROVER"}
+            percentage={true}
+          />
+          <div style={{ width: 50 }} />
+          <CircularStatic
+            value={77.8}
+            max={100}
+            color={"cyan"}
+            label={"BARACUDA"}
+            percentage={true}
+          />
+          <div style={{ width: 50 }} />
+          <CircularStatic
+            value={59.4}
+            max={100}
+            color={"cyan"}
+            label={"RHIB"}
+            percentage={true}
+          />
+          <div style={{ width: 50 }} />
+          <CircularStatic
+            value={50.2}
+            max={100}
+            color={"cyan"}
+            label={"VIPER"}
+            percentage={true}
           />
         </div>
-      </div>
-      <br />
+      </Grid>
+
+      <Grid container justify={"center"}>
+        <Vessel />
+      </Grid>
     </div>
   );
 }

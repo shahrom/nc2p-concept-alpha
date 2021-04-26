@@ -13,6 +13,8 @@
 
 import React from "react";
 import Radar from "./Radar";
+import { FitToViewport } from "react-fit-to-viewport";
+import Grid from "@material-ui/core/Grid";
 
 export default function Slide2(props) {
   return (
@@ -34,7 +36,19 @@ export default function Slide2(props) {
         >
           RADAR READINESS
         </p>
-        <Radar />
+        <Grid container justify={"center"}>
+          <FitToViewport
+            width={1600}
+            height={700}
+            minZoom={0.5}
+            maxZoom={1}
+            style={{ overflow: "hidden" }}
+          >
+            <Grid container justify={"center"}>
+              <Radar />
+            </Grid>
+          </FitToViewport>
+        </Grid>
       </div>
     </div>
   );

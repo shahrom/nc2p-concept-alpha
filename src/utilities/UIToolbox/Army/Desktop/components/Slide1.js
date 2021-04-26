@@ -13,11 +13,14 @@
 
 import React from "react";
 import Readiness from "./Readiness";
+import { FitToViewport } from "react-fit-to-viewport";
+import Grid from "@material-ui/core/Grid";
 
 export default function Slide1(props) {
   const handleUpdateData = () => {
     window.ViewStateManager.UpdateDisplayData();
   };
+
   return (
     <div
       onClick={() => handleUpdateData()}
@@ -39,7 +42,17 @@ export default function Slide1(props) {
         >
           SUMMARY - 19 RAMD
         </p>
-        <Readiness updateData={props.updateData} />
+        <Grid container justify={"center"}>
+          <FitToViewport
+            width={1600}
+            height={700}
+            minZoom={0.5}
+            maxZoom={1}
+            style={{ overflow: "hidden" }}
+          >
+            <Readiness updateData={props.updateData} />
+          </FitToViewport>
+        </Grid>
       </div>
     </div>
   );

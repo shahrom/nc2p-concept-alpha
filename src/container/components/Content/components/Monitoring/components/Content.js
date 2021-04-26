@@ -24,8 +24,11 @@ export default function Content(props) {
         width: window.innerWidth,
       }}
     >
-      {/* <Map /> */}
-      <iframe
+      <Map />
+      {/* <LeftPanel />
+      <RightPanel /> */}
+
+      {/* <iframe
         style={{
           position: "absolute",
           top: "120px",
@@ -38,7 +41,7 @@ export default function Content(props) {
         width="100%"
         height={window.innerHeight - 100}
         scrolling="no"
-      ></iframe>
+      ></iframe> */}
     </div>
   );
 }

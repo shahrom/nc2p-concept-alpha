@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { PieChart, PieArcSeries } from "reaviz";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export function ChartPie1() {
   const [data, setData] = useState([
@@ -10,10 +9,8 @@ export function ChartPie1() {
     { key: "STRIKE", data: 8 },
   ]);
 
-  const isMobile = useMediaQuery("(max-width:768px)");
-
   return (
-    <div style={{ marginLeft: isMobile ? 40 : 170 }}>
+    <div>
       <PieChart
         height={200}
         width={350}
