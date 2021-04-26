@@ -14,7 +14,6 @@
 // componnets viewStates
 import ContentState from "container/components/Content/ViewState";
 import ReadinessState from "container/components/Content/components/Readiness/ViewState";
-import NavyState from "container/components/Content/components/Navy/ViewState";
 import ArmyState from "container/components/Content/components/Army/ViewState";
 import FooterState from "container/components/Footer/ViewState";
 
@@ -26,7 +25,6 @@ export default class ViewStateManager {
       // Register all the ViewState that needs to be accessed globaly
       this.contentState = new ContentState();
       this.readinesState = new ReadinessState();
-      this.navyState = new NavyState();
       this.armyState = new ArmyState();
       this.footerState = new FooterState();
 

@@ -21,33 +21,18 @@ export default class ViewState {
   constructor() {
     if (!instance) {
       this.setIndex = 0;
-      this.setDisplay = "none";
-
+      this.setUpdateData = null;
       instance = this;
     }
     return instance;
   }
 
-  // 2. Binding
   set bindIndex(state) {
     this.setIndex = state;
   }
 
-  set bindDisplay(state) {
-    this.setDisplay = state;
-  }
-
   set bindUpdateData(state) {
     this.setUpdateData = state;
-  }
-
-  // 3. Public Functions
-  Hide() {
-    this.setDisplay = "none";
-  }
-
-  Display() {
-    this.setDisplay = "block";
   }
 
   UpdateData() {

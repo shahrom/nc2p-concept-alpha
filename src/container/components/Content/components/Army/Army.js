@@ -16,18 +16,16 @@ import Grid from "@material-ui/core/Grid";
 
 // components
 import SideMenu from "./components/SideMenu";
-import Content from "./components/Content";
+import Content from "./components/Content/Content";
 import ViewState from "./ViewState";
 
 export default function Army() {
   // 1. UseState
-  const [display, setDisplay] = React.useState("block");
   const [sliderIndex, setSliderIndex] = React.useState(1);
   const [updateData, setUpdateData] = React.useState(0);
   // 2. ViewState
   const viewState = new ViewState();
   viewState.bindIndex = setSliderIndex;
-  viewState.bindDisplay = setDisplay;
   viewState.bindUpdateData = setUpdateData;
 
   const handleSlideIndex = (index) => {

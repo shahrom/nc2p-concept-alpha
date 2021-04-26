@@ -17,10 +17,10 @@ import Grid from "@material-ui/core/Grid";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 // components
-import MobileContent from "utilities/Interface/Airforce/Mobile/AircraftReadiness";
-import DesktopContent from "utilities/Interface/Airforce/Desktop/AircraftReadiness";
+import MobileContent from "utilities/Interface/Navy/Mobile/VesselBarChart";
+import DesktopContent from "utilities/Interface/Navy/Desktop/VesselBarChart";
 
-export default function Slide1(props) {
+export default function Slide2(props) {
   // MediaQuery
   const isMobile = useMediaQuery("(max-width:768px)");
 
@@ -40,7 +40,7 @@ export default function Slide1(props) {
             backgroundColor: "#0B3B84",
           }}
         >
-          AIRCRAFT READINESS
+          RADAR READINESS
         </p>
 
         {isMobile ? (
@@ -48,7 +48,7 @@ export default function Slide1(props) {
         ) : (
           <Grid container justify={"center"}>
             <FitToViewport
-              width={1100}
+              width={1300}
               height={700}
               minZoom={0.6}
               maxZoom={1}

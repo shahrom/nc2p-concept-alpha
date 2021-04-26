@@ -42,10 +42,10 @@ export default function InspectionBarChart(props) {
   return (
     <div>
       <BarChart
-        width={800}
+        width={700}
         height={300}
         data={data}
-        margin={{ top: 0, right: 30, left: 0, bottom: 50 }}
+        margin={{ top: 0, right: 50, left: 0, bottom: 50 }}
       >
         <XAxis
           dataKey="name"

@@ -43,7 +43,7 @@ export default function InspectionBarChart(props) {
     <div>
       <BarChart
         width={700}
-        height={300}
+        height={400}
         data={data}
         margin={{ top: 0, right: 30, left: 0, bottom: 50 }}
       >

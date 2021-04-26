@@ -18,7 +18,6 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 // components
 import MobileMenu from "utilities/Interface/Airforce/Mobile/Menu";
 import DesktopMenu from "utilities/Interface/Airforce/Desktop/Menu";
-// import DesktopMenu from "utilities/Interface/Default/Menu";
 
 export default function SideMenu(props) {
   // MediaQuery

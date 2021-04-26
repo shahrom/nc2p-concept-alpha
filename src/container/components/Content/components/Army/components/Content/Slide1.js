@@ -17,15 +17,20 @@ import Grid from "@material-ui/core/Grid";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 // components
-import MobileContent from "utilities/Interface/Airforce/Mobile/AircraftReadiness";
-import DesktopContent from "utilities/Interface/Airforce/Desktop/AircraftReadiness";
+import MobileContent from "utilities/Interface/Army/Mobile/Summary";
+import DesktopContent from "utilities/Interface/Army/Desktop/Summary";
 
 export default function Slide1(props) {
   // MediaQuery
   const isMobile = useMediaQuery("(max-width:768px)");
 
+  const handleUpdateData = () => {
+    window.ViewStateManager.UpdateDisplayData();
+  };
+
   return (
     <div
+      onClick={() => handleUpdateData()}
       style={{
         backgroundColor: "rgba(17,21,30,0.5)",
       }}
@@ -40,11 +45,14 @@ export default function Slide1(props) {
             backgroundColor: "#0B3B84",
           }}
         >
-          AIRCRAFT READINESS
+          SUMMARY
         </p>
 
         {isMobile ? (
-          <MobileContent sliderIndex={props.sliderIndex} />
+          <MobileContent
+            updateData={props.updateData}
+            sliderIndex={props.sliderIndex}
+          />
         ) : (
           <Grid container justify={"center"}>
             <FitToViewport
@@ -55,7 +63,10 @@ export default function Slide1(props) {
               style={{ overflow: "hidden" }}
             >
               <Grid container justify={"center"}>
-                <DesktopContent sliderIndex={props.sliderIndex} />
+                <DesktopContent
+                  updateData={props.updateData}
+                  sliderIndex={props.sliderIndex}
+                />
               </Grid>
             </FitToViewport>
           </Grid>

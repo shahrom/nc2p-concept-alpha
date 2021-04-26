@@ -16,23 +16,18 @@ import Grid from "@material-ui/core/Grid";
 
 // components
 import SideMenu from "./components/SideMenu";
-import Content from "./components/Content";
-import ViewState from "./ViewState";
+import Content from "./components/Content/Content";
 
-export default function Complaints() {
+export default function Airforce() {
   // 1. UseState
-  const [display, setDisplay] = React.useState("block");
   const [sliderIndex, setSliderIndex] = React.useState(1);
-  // 2. ViewState
-  const viewState = new ViewState();
-  viewState.bindIndex = setSliderIndex;
-  viewState.bindDisplay = setDisplay;
 
   const handleSlideIndex = (index) => {
     setSliderIndex(index);
   };
 
   return (
+    // This height: window.innerHeight - 90 enables it to scroll in mobile mode
     <div style={{ overflowY: "auto", height: window.innerHeight - 90 }}>
       <Grid container justify="center" spacing={5}>
         <Grid item md={4} xs={12}>

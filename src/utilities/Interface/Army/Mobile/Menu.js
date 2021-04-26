@@ -23,15 +23,16 @@ export default function Menu(props) {
     flexDirection: "row",
   };
 
-  const handleUpdateData = () => {
-    window.ViewStateManager.UpdateDisplayData();
-  };
-
   return (
     <div>
       <br />
       <div style={childrenSideBySideStyle}>
-        <img src={"img/logo/td.png"} width={"30px"} height="auto" object-fit="contain" />
+        <img
+          src={"img/logo/td.png"}
+          width={"30px"}
+          height="auto"
+          object-fit="contain"
+        />
         <div style={{ width: 10 }} />
         <span
           style={{
@@ -60,7 +61,6 @@ export default function Menu(props) {
 
       <div style={childrenSideBySideStyle}>
         <Button
-          onClick={() => handleUpdateData()}
           style={{
             outline: "none",
             color: "cyan",

@@ -38,10 +38,6 @@ export default function CrisisManagement(props) {
     },
   });
 
-  const handleUpdateData = () => {
-    window.ViewStateManager.UpdateDisplayData();
-  };
-
   return (
     <animated.div style={animLayout}>
       <div>
@@ -97,7 +93,6 @@ export default function CrisisManagement(props) {
 
         <div style={childrenSideBySideStyle}>
           <Button
-            onClick={() => handleUpdateData()}
             style={{
               outline: "none",
               color: "cyan",
@@ -134,9 +129,9 @@ export default function CrisisManagement(props) {
         </Button>
         <br />
         <Button
-          style={{ border: "none", outline: "none", color: "gray" }}
+          style={{ border: "none", outline: "none", color: "#0375ED" }}
           startIcon={<InfoIcon />}
-          // onClick={() => props.handleSlideIndex(2)}
+          onClick={() => props.handleSlideIndex(2)}
         >
           Unit Readiness
         </Button>

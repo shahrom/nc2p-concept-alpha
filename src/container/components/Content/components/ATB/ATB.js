@@ -16,17 +16,11 @@ import Grid from "@material-ui/core/Grid";
 
 // components
 import SideMenu from "./components/SideMenu";
-import Content from "./components/Content";
-import ViewState from "./ViewState";
+import Content from "./components/Content/Content";
 
 export default function ATB() {
   // 1. UseState
-  const [display, setDisplay] = React.useState("block");
   const [sliderIndex, setSliderIndex] = React.useState(1);
-  // 2. ViewState
-  const viewState = new ViewState();
-  viewState.bindIndex = setSliderIndex;
-  viewState.bindDisplay = setDisplay;
 
   const handleSlideIndex = (index) => {
     setSliderIndex(index);

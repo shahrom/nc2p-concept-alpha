@@ -33,7 +33,7 @@ function CircularProgressWithLabel(props) {
           {props.value}
         </p>
       </Box>
-      <p style={{ color: "white" }}>{props.label}</p>
+      <p style={{ color: "white", fontSize: 18 }}>{props.label}</p>
     </div>
   );
 }

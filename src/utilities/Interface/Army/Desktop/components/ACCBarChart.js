@@ -113,19 +113,19 @@ export default function InspectionBarChart(props) {
     }, 200);
   }, [props.updateData]);
 
-  React.useEffect(() => {
-    var ele = document.getElementById("Army.Slider1"), // Do not use #
-      eleStyle = window.getComputedStyle(ele);
-    var eleWidth = eleStyle.width;
-    var width = eleWidth.replace("px", "");
+  // React.useEffect(() => {
+  //   var ele = document.getElementById("Army.Slider1"), // Do not use #
+  //     eleStyle = window.getComputedStyle(ele);
+  //   var eleWidth = eleStyle.width;
+  //   var width = eleWidth.replace("px", "");
 
-    setWidth(parseInt(width));
-  });
+  //   setWidth(parseInt(width));
+  // });
 
   return (
     <Grid container justify={"center"}>
       <BarChart
-        width={800}
+        width={700}
         height={400}
         data={data}
         margin={{ top: 55, right: 20, left: 0, bottom: 50 }}

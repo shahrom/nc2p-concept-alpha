@@ -64,10 +64,10 @@ export default function MyBarChart(props) {
     <div style={{ opacity: 0.8 }}>
       <BarChart
         width={600}
-        height={300}
+        height={400}
         data={data}
         layout="vertical"
-        margin={{ top: 15, right: 0, left: 90, bottom: 0 }}
+        margin={{ top: 15, right: 0, left: 90, bottom: 50 }}
       >
         <XAxis type="number" />
         <YAxis

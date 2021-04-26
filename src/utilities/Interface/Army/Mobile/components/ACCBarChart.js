@@ -113,23 +113,23 @@ export default function InspectionBarChart(props) {
     }, 200);
   }, [props.updateData]);
 
-  React.useEffect(() => {
-    var ele = document.getElementById("Army.Slider1"),
-      eleStyle = window.getComputedStyle(ele);
-    var eleWidth = eleStyle.width;
-    var width = eleWidth.replace("px", "");
+  // React.useEffect(() => {
+  //   var ele = document.getElementById("Army.Slider1"),
+  //     eleStyle = window.getComputedStyle(ele);
+  //   var eleWidth = eleStyle.width;
+  //   var width = eleWidth.replace("px", "");
 
-    setWidth(parseInt(width));
-  });
+  //   setWidth(parseInt(width));
+  // });
 
   return (
     <div>
       <p style={{ textAlign: "center", color: "gray" }}>Elements</p>
       <BarChart
-        width={width - 30}
+        width={window.innerWidth - 80}
         height={150}
         data={data}
-        margin={{ top: 0, right: 0, left: -60, bottom: 0 }}
+        margin={{ top: 0, right: 0, left: -50, bottom: 0 }}
         style={{ marginLeft: -10 }}
       >
         <XAxis

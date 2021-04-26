@@ -12,16 +12,22 @@
  */
 
 import React from "react";
-import Radar from "./Radar";
 import { FitToViewport } from "react-fit-to-viewport";
 import Grid from "@material-ui/core/Grid";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+
+// components
+import MobileContent from "utilities/Interface/Airforce/Mobile/RadarReadiness";
+import DesktopContent from "utilities/Interface/Airforce/Desktop/RadarReadiness";
 
 export default function Slide2(props) {
+  // MediaQuery
+  const isMobile = useMediaQuery("(max-width:768px)");
+
   return (
     <div
       style={{
         backgroundColor: "rgba(17,21,30,0.5)",
-        height: 700,
       }}
     >
       <div>
@@ -36,19 +42,24 @@ export default function Slide2(props) {
         >
           RADAR READINESS
         </p>
-        <Grid container justify={"center"}>
-          <FitToViewport
-            width={1600}
-            height={700}
-            minZoom={0.5}
-            maxZoom={1}
-            style={{ overflow: "hidden" }}
-          >
-            <Grid container justify={"center"}>
-              <Radar />
-            </Grid>
-          </FitToViewport>
-        </Grid>
+
+        {isMobile ? (
+          <MobileContent sliderIndex={props.sliderIndex} />
+        ) : (
+          <Grid container justify={"center"}>
+            <FitToViewport
+              width={1100}
+              height={700}
+              minZoom={0.6}
+              maxZoom={1}
+              style={{ overflow: "hidden" }}
+            >
+              <Grid container justify={"center"}>
+                <DesktopContent sliderIndex={props.sliderIndex} />
+              </Grid>
+            </FitToViewport>
+          </Grid>
+        )}
       </div>
     </div>
   );
