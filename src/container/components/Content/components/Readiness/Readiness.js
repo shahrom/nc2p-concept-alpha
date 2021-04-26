@@ -15,8 +15,8 @@ import React from "react";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 // components
-import Desktop from "utilities/UIToolbox/Readiness/Desktop/Desktop";
-import Mobile from "utilities/UIToolbox/Readiness/Mobile/Mobile";
+import Desktop from "utilities/Interface/Readiness/Desktop/Desktop";
+import Mobile from "utilities/Interface/Readiness/Mobile/Mobile";
 
 export default function Header() {
   const isMobile = useMediaQuery("(max-width:768px)");

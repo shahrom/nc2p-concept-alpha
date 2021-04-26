@@ -13,23 +13,18 @@
 
 import React from "react";
 import Container from "@material-ui/core/Container";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 // components
-import MobileContent from "utilities/UIToolbox/Airforce/Mobile/Content";
-import DesktopContent from "utilities/UIToolbox/Airforce/Desktop/Content";
+import Slide1 from "./Slide1";
+import Slide2 from "./Slide2";
 
 export default function Content(props) {
-  // MediaQuery
-  const isMobile = useMediaQuery("(max-width:768px)");
-
   return (
     <Container maxWidth="md">
-      {isMobile ? (
-        <MobileContent sliderIndex={props.sliderIndex} />
-      ) : (
-        <DesktopContent sliderIndex={props.sliderIndex} />
-      )}
+      <SwipeableViews index={props.sliderIndex - 1}>
+        <Slide1 />
+        <Slide2 />
+      </SwipeableViews>
     </Container>
   );
 }

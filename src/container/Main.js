@@ -21,9 +21,9 @@ import Footer from "./components/Footer/Footer";
 import Content from "./components/Content/Content";
 
 // utilities
-import MessageDispatcher from "utilities/MessageDispatcher";
-import ViewStateManager from "utilities/ViewStateManager";
-import { GlobalConfig } from "utilities/GlobalConfig";
+import MessageDispatcher from "utilities/Services/MessageDispatcher";
+import ViewStateManager from "utilities/Services/ViewStateManager";
+import { GlobalConfig } from "utilities/Services/GlobalConfig";
 
 const styles = {
   "@global": {
@@ -62,9 +62,7 @@ class Main extends React.Component {
     // Refreshes the screen when the viewport changes from Portrait to Landscape
     // The previous method was to refresh the screen but we no longer have to do that
     window.addEventListener("orientationchange", function () {
-      var originalBodyStyle = getComputedStyle(document.body).getPropertyValue(
-        "display"
-      );
+      var originalBodyStyle = getComputedStyle(document.body).getPropertyValue("display");
       document.body.style.display = "none";
       setTimeout(function () {
         document.body.style.display = originalBodyStyle;

@@ -14,7 +14,7 @@
 import React from "react";
 
 // components
-import Content from "utilities/UIToolbox/Monitoring/LeftPanel";
+import Content from "utilities/Interface/Monitoring/LeftPanel";
 
 export default function LeftPanel(props) {
   return (

@@ -14,7 +14,7 @@
 import React from "react";
 
 // components
-import Map from "utilities/UIToolbox/Monitoring/Map";
+import Map from "utilities/Interface/Monitoring/Map";
 
 export default function Content(props) {
   return (

@@ -14,7 +14,7 @@
 import React from "react";
 
 // Local
-import MessageDispatcher from "utilities/MessageDispatcher";
+import MessageDispatcher from "utilities/Services/MessageDispatcher";
 import MapData from "./components/MapData";
 import PatrolData from "./components/PatrolData";
 import RiverData from "./components/RiverData";

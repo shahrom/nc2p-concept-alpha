@@ -14,7 +14,7 @@
 import React from "react";
 
 // components
-import Content from "utilities/UIToolbox/Monitoring/RightPanel";
+import Content from "utilities/Interface/Monitoring/RightPanel";
 
 export default function RightPanel(props) {
   return (

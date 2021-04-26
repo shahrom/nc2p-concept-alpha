@@ -16,8 +16,8 @@ import Container from "@material-ui/core/Container";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 // components
-import MobileMenu from "utilities/UIToolbox/Navy/Mobile/Menu";
-import DesktopMenu from "utilities/UIToolbox/Navy/Desktop/Menu";
+import MobileMenu from "utilities/Interface/Navy/Mobile/Menu";
+import DesktopMenu from "utilities/Interface/Navy/Desktop/Menu";
 
 export default function SideMenu(props) {
   // MediaQuery
